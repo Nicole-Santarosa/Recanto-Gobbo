@@ -70,7 +70,7 @@ A paleta visual utiliza tons terrosos, verdes naturais e elementos visuais que r
 - HTML5
 - CSS3
 - JavaScript
-- Figma (Wireframe + Protótтипо + Design System)
+- Figma (Wireframe + Protótipo + Design System)
 - Git
 
 ---
