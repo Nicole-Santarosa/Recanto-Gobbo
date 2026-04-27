@@ -4,7 +4,7 @@ Projeto desenvolvido para criação do site institucional e comercial do **Recan
 
 O principal objetivo do projeto é proporcionar aos visitantes do site a mesma sensação de proximidade e imersão que eles encontram nas redes sociais, transmitindo a essência do campo e a conexão com o proprietário do sítio.
 
-A estrutura do projeto foi baseada no Documento de Requisitos e na modelagem proposta seguindo a organização recomendada por Sommerville (2011) :contentReference[oaicite:0]{index=0}.
+A estrutura do projeto foi baseada no Documento de Requisitos e na modelagem proposta seguindo a organização recomendada por Sommerville (2011).
 
 ---
 
@@ -72,7 +72,6 @@ A paleta visual utiliza tons terrosos, verdes naturais e elementos visuais que r
 - JavaScript
 - Figma (Wireframe + Protótтипо + Design System)
 - Git
-- :contentReference[oaicite:1]{index=1}
 
 ---
 
