@@ -132,3 +132,22 @@ Atualmente o projeto encontra-se em fase de refinamento visual, padronização d
 ## 📌 Observação
 
 Este projeto busca ir além de um site institucional tradicional: a proposta é criar uma experiência digital que faça o usuário se sentir dentro do campo, vivendo a essência do Recanto Gobbo mesmo à distância.
+
+---
+
+## 🎨 Protótipos e Wireframes
+
+Todo o processo de estruturação visual do projeto foi desenvolvido no Figma, incluindo:
+
+- Wireframes de baixa fidelidade
+- Protótipos de alta fidelidade
+- Design System
+- Componentes reutilizáveis (Header, Footer e Menu Mobile)
+- Fluxo de navegação entre páginas
+
+### 🔗 Acesse no Figma
+
+- Wireframe: https://www.figma.com/design/4RpUj9zLgeRKqIUPkL165b/Wireframe?node-id=0-1&t=4NwBTsuzVO0AlR7A-1
+- Design System e Protótipo: https://figma.com/design/2K1mTqL4uMimbATxkF5YL8/Prot%C3%B3tipo?node-id=6-9&t=4NwBTsuzVO0AlR7A-1
+
+Esses materiais foram fundamentais para garantir consistência visual, experiência do usuário e alinhamento com os objetivos do cliente.
