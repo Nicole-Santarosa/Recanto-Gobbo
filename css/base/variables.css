@@ -1,0 +1,32 @@
+/* ================================
+   VARIÁVEIS GLOBAIS DO PROJETO
+   Identidade visual Recanto Gobbo
+================================ */
+
+:root {
+  /* Cores de fundo */
+  --color-bg-primary: #EBD5C3;
+  --color-bg-secondary: #FFFDF8;
+
+  /* Cores da marca */
+  --color-brand-dark: #1F3D2B;
+  --color-brand-cta: #E0DCCB;
+
+  /* Cores de texto */
+  --color-text-primary: #1F3D2B;
+  --color-text-secondary: #237D47;
+  --color-text-inverse: #FFFFFF;
+
+  /* Estados de interação */
+  --color-hover: #E8B923;
+  --color-pressed: #B85A05;
+  --color-active: #9C7C16;
+
+  /* Fontes */
+  --font-title: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 90px;
+}

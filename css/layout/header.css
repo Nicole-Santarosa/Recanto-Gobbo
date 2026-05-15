@@ -1,0 +1,119 @@
+/* ================================
+   HEADER
+   Cabeçalho principal do site
+================================ */
+
+/* Header fixo no topo */
+.header {
+  width: 100%;
+  height: var(--header-height);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background-color: var(--color-bg-secondary);
+}
+
+/* Container interno do header */
+.navbar {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Link que envolve a logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Imagem da logo */
+.logo-image {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Menu desktop */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 54px;
+
+  flex: 1;
+}
+
+/* Links do menu */
+.nav-menu a {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+
+  color: var(--color-text-primary);
+  text-shadow: 0 8px 8px rgba(31, 61, 43, 0.22);
+
+  transition: color 0.3s ease;
+}
+
+/* Hover dos links */
+.nav-menu a:hover {
+  color: var(--color-hover);
+}
+
+/* Link da página atual */
+.nav-menu a.active {
+  color: var(--color-active);
+}
+
+/* Frase institucional do header */
+.header-phrase {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+  color: var(--color-text-primary);
+}
+
+/* Ícone ao lado da frase */
+.header-icon {
+  width: 35px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Texto forte da frase */
+.header-phrase strong {
+  display: block;
+
+  font-family: var(--font-title);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Texto secundário da frase */
+.header-phrase p {
+  margin-top: 4px;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+/* Botão hambúrguer escondido no desktop */
+.menu-toggle {
+  display: none;
+  color: var(--color-text-primary);
+  font-size: 2rem;
+}

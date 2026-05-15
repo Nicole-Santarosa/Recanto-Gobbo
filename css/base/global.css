@@ -1,0 +1,40 @@
+/* ================================
+   ESTILOS GLOBAIS
+   Base visual geral do site
+================================ */
+
+/* Estilo padrão do corpo do site */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Conteúdo principal abaixo do header fixo */
+.main-content {
+  padding-top: var(--header-height);
+}
+
+/* Seção padrão para páginas internas */
+.page-section {
+  min-height: calc(100vh - var(--header-height));
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* Títulos principais das páginas */
+.page-section h1 {
+  font-family: var(--font-title);
+  font-size: 37px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* Parágrafos padrão */
+.page-section p {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+}

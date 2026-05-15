@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Define o padrão de caracteres do site -->
+  <!-- Configuração de caracteres -->
   <meta charset="UTF-8">
 
-  <!-- Garante que o site fique responsivo em celulares e tablets -->
+  <!-- Responsividade para dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Título exibido na aba do navegador -->
-  <title>Recanto Gobbo</title>
+  <!-- Título da página -->
+  <title>Sobre | Recanto Gobbo</title>
 
   <!-- Fontes do projeto: Playfair Display e Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +19,19 @@
     rel="stylesheet"
   >
 
-  <!-- Importa o CSS principal do projeto -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-
-<!-- Classe "home" identifica que esta é a página inicial -->
-<body class="home">
+<body class="sobre">
 
   <!-- Header principal do site -->
   <header class="header">
     <nav class="navbar">
 
       <!-- Logo principal -->
-      <a href="index.html" class="logo">
+      <a href="../index.html" class="logo">
         <img 
-          src="assets/logo-recanto-gobbo.png" 
+          src="../assets/logo-recanto-gobbo.png" 
           alt="Logo Recanto Gobbo"
           class="logo-image"
         >
@@ -41,18 +39,18 @@
 
       <!-- Menu principal -->
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="pages/sobre.html">Sobre o Recanto</a></li>
-        <li><a href="pages/produtos.html">Produtos</a></li>
-        <li><a href="pages/servicos.html">Serviços</a></li>
-        <li><a href="pages/contato.html">Contato</a></li>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../pages/sobre.html" class="active">Sobre o Recanto</a></li>
+        <li><a href="../pages/produtos.html">Produtos</a></li>
+        <li><a href="../pages/servicos.html">Serviços</a></li>
+        <li><a href="../pages/contato.html">Contato</a></li>
       </ul>
 
       <!-- Frase institucional do header desktop -->
       <div class="header-phrase">
         <!-- Ícone decorativo da frase do header -->
         <img 
-          src="assets/icone-header.png" 
+          src="../assets/icone-header.png" 
             alt="" 
             class="header-icon"
         >
@@ -72,18 +70,16 @@
 
   <!-- Conteúdo principal da página -->
   <main class="main-content">
-
-    <!-- Seção base da página inicial -->
     <section class="page-section">
-      <h1>Home</h1>
-      <p>Estrutura base da página inicial.</p>
+      <h1>Sobre</h1>
+      <p>Estrutura base da página Sobre.</p>
     </section>
   </main>
 
 <!-- Footer principal do site -->
 <footer class="footer">
 
-  <!-- Camada escura por cima da imagem para melhorar leitura -->
+  <!-- Camada por cima da imagem de fundo para melhorar leitura -->
   <div class="footer-overlay">
 
     <!-- Container principal do footer -->
@@ -92,7 +88,7 @@
       <!-- Coluna da marca -->
       <div class="footer-brand">
         <img 
-          src="assets/logo-recanto-gobbo.png" 
+          src="../assets/logo-recanto-gobbo.png" 
           alt="Logo Recanto Gobbo"
           class="footer-logo-image"
         >
@@ -107,11 +103,11 @@
         <h3>Navegação</h3>
 
         <nav class="footer-links">
-          <a href="index.html">Início</a>
-          <a href="pages/sobre.html">Sobre o Recanto</a>
-          <a href="pages/produtos.html">Produtos</a>
-          <a href="pages/servicos.html">Serviços</a>
-          <a href="pages/contato.html">Contato</a>
+          <a href="../index.html">Início</a>
+          <a href="sobre.html">Sobre o Recanto</a>
+          <a href="produtos.html">Produtos</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="contato.html">Contato</a>
         </nav>
       </div>
 
@@ -148,7 +144,7 @@
   </div>
 </footer>
 
-  <!-- JavaScript principal -->
-  <script src="js/script.js"></script>
+<!-- JavaScript principal -->
+<script src="../js/script.js"></script>
 </body>
 </html>

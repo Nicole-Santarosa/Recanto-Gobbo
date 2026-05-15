@@ -1,0 +1,42 @@
+/* ================================
+   COMPONENTES REUTILIZÁVEIS
+================================ */
+
+/* Container padrão para centralizar conteúdo */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Título padrão */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+/* Texto padrão */
+.section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Botão padrão */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+
+  background-color: var(--color-primary);
+  color: #fff;
+
+  transition: 0.3s ease;
+}
+
+/* Hover do botão */
+.btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
