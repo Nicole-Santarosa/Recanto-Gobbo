@@ -25,9 +25,9 @@
   /* Clareia sem apagar totalmente a imagem */
   background: linear-gradient(
     180deg,
-    rgba(255, 253, 248, 0.68) 0%,
-    rgba(255, 253, 248, 0.52) 45%,
-    rgba(255, 253, 248, 0.35) 100%
+    rgba(255, 253, 248, 0.82) 0%,
+    rgba(255, 253, 248, 0.72) 45%,
+    rgba(255, 253, 248, 0.50) 100%
   );
 }
 
