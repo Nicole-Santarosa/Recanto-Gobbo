@@ -45,11 +45,55 @@
 
       <!-- Menu principal -->
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../pages/sobre.html" class="active">Sobre o Recanto</a></li>
-        <li><a href="../pages/produtos.html">Produtos</a></li>
-        <li><a href="../pages/servicos.html">Serviços</a></li>
-        <li><a href="../pages/contato.html">Contato</a></li>
+
+        <!-- Link para a página inicial -->
+        <li class="nav-item">
+          <a href="../index.html">Início</a>
+        </li>
+
+        <!-- Link para a página Sobre -->
+        <li class="nav-item">
+          <a href="sobre.html" class="active">Sobre o Recanto</a>
+        </li>
+
+        <!-- Item com submenu de produtos -->
+        <li class="nav-item has-submenu">
+          <div class="submenu-parent">
+            <a href="produtos.html">Produtos</a>
+
+            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de produtos">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <ul class="submenu">
+            <li><a href="#">Boné</a></li>
+          </ul>
+        </li>
+
+        <!-- Item com submenu de serviços -->
+        <li class="nav-item has-submenu">
+          <div class="submenu-parent">
+            <a href="servicos.html">Serviços</a>
+
+            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de serviços">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <ul class="submenu">
+            <li><a href="#">Palestras</a></li>
+            <li><a href="#">Embaixadores Digitais</a></li>
+            <li><a href="#">Ações de Marca</a></li>
+            <li><a href="#">Proposta de Eventos</a></li>
+          </ul>
+        </li>
+
+        <!-- Link para a página Contato -->
+        <li class="nav-item">
+          <a href="contato.html">Contato</a>
+        </li>
+
       </ul>
 
       <!-- Frase institucional do header desktop -->

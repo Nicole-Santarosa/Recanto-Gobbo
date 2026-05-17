@@ -142,3 +142,100 @@
     rgba(255, 253, 248, 0) 100%
   );
 }
+
+/* ================================
+   SUBMENU DESKTOP
+================================ */
+
+.nav-item {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 220px;
+  padding: 14px 0;
+
+  background-color: var(--color-bg-secondary);
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(31, 61, 43, 0.16);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: 0.25s ease;
+  z-index: 3000;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 18px;
+
+  font-size: 16px;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Agrupa o link principal e a seta do submenu */
+.submenu-parent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Link principal dentro do item com submenu */
+.submenu-parent > a {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+
+  color: var(--color-text-primary);
+  text-shadow: 0 8px 8px rgba(31, 61, 43, 0.22);
+
+  transition: color 0.3s ease;
+}
+
+/* Hover no link principal */
+.submenu-parent > a:hover {
+  color: var(--color-hover);
+}
+
+/* Botão da setinha */
+.submenu-toggle {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.submenu-toggle:hover {
+  color: var(--color-hover);
+}
+
+/* Ícone da setinha */
+.submenu-toggle i {
+  font-size: 12px;
+}
