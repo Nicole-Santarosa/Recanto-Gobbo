@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: "Inter", "Montserrat", "Playfair Display SC", sans-serif;
+  margin: 0;
+  overflow-y: auto;
+}
+
+#navbar {
+  background-color: transparent;
+  box-shadow: 0 9px 4px rgba(4, 4, 4, 0.235);
+}
+
+.text0 {
+  font-size: 0.8rem;
+  color: #000000;
+  font-weight: 300;
+}
+
+#card {
+  padding: 1rem;
+  z-index: 1;
+  background-color: #f5f2ec;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.201);
+}
+
+#card p {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#card a {
+  background-color: #3d3d2e;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.201);
+  color: #fff;
+}
