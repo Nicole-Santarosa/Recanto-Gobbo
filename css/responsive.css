@@ -341,3 +341,15 @@
     color: #fff;
   }
 }
+
+/* Degradê do header menor no mobile */
+.header::after {
+  bottom: -24px;
+  height: 24px;
+}
+
+/* Degradê do footer menor no mobile */
+.footer::before {
+  top: -28px;
+  height: 28px;
+}

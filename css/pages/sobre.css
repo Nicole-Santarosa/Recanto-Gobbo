@@ -343,7 +343,7 @@
   align-items: center;
   justify-content: center;
 
-  background-image: url("../../assets/cta-banner.png");
+  background-image: url("../../assets/images/cta-banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -403,14 +403,14 @@
 @media (max-width: 768px) {
     /* Banner principal no mobile */
     .sobre-hero {
-    min-height: 320px;
+    min-height: 300px;
     margin-top: var(--header-height);
 
     display: flex;
     align-items: flex-start;
 
-    background-image: url("../../assets/hero-sobre.png");
-    background-size: cover;
+    background-image: url("../../assets/images/hero-sobre.png");
+    background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
 
@@ -419,15 +419,19 @@
 
     /* Texto do banner no mobile */
     .sobre-hero-content {
-    padding: 120px 24px 0;
+    padding: 90px 24px 0;
     }
 
   .sobre-hero-content h1 {
     font-size: 42px;
+    line-height: 1;
   }
 
   .sobre-hero-content p {
-    font-size: 19px;
+    max-width: 330px;
+    margin-top: 8px;
+    font-size: 17px;
+    line-height: 1.2;
   }
 
   .sobre-intro {
@@ -519,15 +523,22 @@
     grid-row: span 2;
   }
 
-  .sobre-cta {
+    .sobre-cta {
     min-height: 300px;
-    margin: 0 24px 60px;
-    border-radius: 24px;
+    margin: 0;
+    padding: 32px 24px;
+
+    border-radius: 0;
+
+    background-size: cover;
+    background-position: center;
   }
 
   .sobre-cta-card {
     max-width: 310px;
     padding: 28px 24px;
+
+    border-radius: 20px;
   }
 
   .sobre-cta-card h2 {
