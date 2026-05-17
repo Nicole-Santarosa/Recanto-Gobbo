@@ -37,7 +37,7 @@
       <!-- Logo principal -->
       <a href="../index.html" class="logo">
         <img 
-          src="../assets/logo-recanto-gobbo.png" 
+          src="../assets/images/logo-recanto-gobbo.png" 
           alt="Logo Recanto Gobbo"
           class="logo-image"
         >
@@ -45,21 +45,60 @@
 
       <!-- Menu principal -->
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../pages/sobre.html">Sobre o Recanto</a></li>
-        <li><a href="../pages/produtos.html">Produtos</a></li>
-        <li><a href="../pages/servicos.html" class="active">Serviços</a></li>
-        <li><a href="../pages/contato.html">Contato</a></li>
+
+        <li class="nav-item">
+          <a href="../index.html">Início</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="sobre.html">Sobre o Recanto</a>
+        </li>
+
+        <li class="nav-item has-submenu">
+          <div class="submenu-parent">
+            <a href="produtos.html">Produtos</a>
+
+            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de produtos">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <ul class="submenu">
+            <li><a href="#">Boné</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-submenu">
+          <div class="submenu-parent">
+            <a href="servicos.html" class="active">Serviços</a>
+
+            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de serviços">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <ul class="submenu">
+            <li><a href="#">Palestras</a></li>
+            <li><a href="#">Embaixadores Digitais</a></li>
+            <li><a href="#">Ações de Marca</a></li>
+            <li><a href="#">Proposta de Eventos</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="contato.html">Contato</a>
+        </li>
+
       </ul>
 
       <!-- Frase institucional do header desktop -->
       <div class="header-phrase">
-        <!-- Ícone decorativo da frase do header -->
         <img 
-          src="../assets/icone-header.png" 
-            alt="" 
-            class="header-icon"
+          src="../assets/images/icone-header.png" 
+          alt="" 
+          class="header-icon"
         >
+
         <div>
           <strong>A vida no campo</strong>
           <p>é mais simples e cheia de propósito.</p>
@@ -94,7 +133,7 @@
       <!-- Coluna da marca -->
       <div class="footer-brand">
         <img 
-          src="../assets/logo-recanto-gobbo.png" 
+          src="../assets/images/logo-recanto-gobbo.png" 
           alt="Logo Recanto Gobbo"
           class="footer-logo-image"
         >
