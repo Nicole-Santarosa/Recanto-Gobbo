@@ -376,4 +376,65 @@
     content: none !important;
     display: none;
   }
+
+    /* ================================
+     SUBMENU MOBILE
+  ================================ */
+
+  /* Submenu fechado no mobile */
+  .submenu {
+    position: static;
+
+    width: 100%;
+    min-width: auto;
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    transition: max-height 0.3s ease;
+  }
+
+  /* Submenu aberto no mobile */
+  .has-submenu.submenu-open .submenu {
+    max-height: 360px;
+  }
+
+  /* Cada subitem acompanha o visual do menu */
+  .submenu li {
+    width: 100%;
+    border-bottom: 1px solid rgba(31, 61, 43, 0.12);
+  }
+
+  /* Link do submenu: mesmo estilo, menor e sem ícone */
+  .submenu a {
+    width: 100%;
+    padding: 14px 0 14px 80px;
+
+    display: block;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    color: rgba(31, 61, 43, 0.78);
+    text-shadow: none;
+  }
+
+  .submenu a:hover {
+    color: var(--color-active);
+  }
+
+  /* Remove símbolo dos subitens */
+  .submenu a::before {
+    content: none !important;
+    display: none !important;
+  }
 }
