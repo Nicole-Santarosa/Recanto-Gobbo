@@ -86,7 +86,7 @@
 
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 28px;
 
     background: transparent;
     border-radius: 0;
@@ -120,34 +120,45 @@
     color: var(--color-active);
   }
 
-  /* Ícones aparecem apenas no mobile */
+  /* Ícones reais do menu mobile */
   .nav-menu li:nth-child(1) a::before {
-    content: "⌂";
+    content: "\f015"; /* casa */
   }
 
   .nav-menu li:nth-child(2) a::before {
-    content: "♧";
+    content: "\f06c"; /* folha */
   }
 
   .nav-menu li:nth-child(3) a::before {
-    content: "▢";
+    content: "\f290"; /* sacola */
   }
 
   .nav-menu li:nth-child(4) a::before {
-    content: "⌂";
+    content: "\f562"; /* sino/serviço */
   }
 
   .nav-menu li:nth-child(5) a::before {
-    content: "✉";
+    content: "\f0e0"; /* envelope */
   }
 
   /* Estilo dos ícones mobile */
   .nav-menu a::before {
-    width: 32px;
-    display: inline-flex;
-    justify-content: center;
-    font-size: 28px;
-  }
+  width: 52px;
+
+  display: inline-flex;
+  justify-content: center;
+
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+
+  font-size: 34px;
+  color: var(--color-text-primary);
+}
+
+  /* ícones ativos ficam dourados */
+  .nav-menu a.active::before{
+  color: var(--color-active);
+}
 
   /* ================================
     FOOTER MOBILE
