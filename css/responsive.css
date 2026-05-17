@@ -19,7 +19,7 @@
 
   /* Logo menor no mobile */
   .logo-image {
-    width: 130px;
+    width: 90px;
   }
 
   /* Botão hambúrguer no mobile */
@@ -308,27 +308,17 @@
 
     background-color: rgba(80, 55, 32, 0.85);
     color: #fff;
-
-    font-size: 0;
   }
 
-  /* Ícones simples por texto */
-  .footer-social a:nth-child(1)::before {
-    content: "IG";
-    font-size: 16px;
-    font-weight: 700;
+  /* Esconde o texto no mobile */
+  .footer-social span {
+    display: none;
   }
 
-  .footer-social a:nth-child(2)::before {
-    content: "WA";
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .footer-social a:nth-child(3)::before {
-    content: "TT";
-    font-size: 16px;
-    font-weight: 700;
+  /* Ícones no mobile */
+  .footer-social i {
+    font-size: 24px;
+    line-height: 1;
   }
 
   /* Base inferior */
