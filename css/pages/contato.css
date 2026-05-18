@@ -1,0 +1,270 @@
+/* ==========================================================================
+   PÁGINA DE CONTATO - RECANTO GOBBO
+   ========================================================================== */
+
+/* Configurações Gerais da Página de Contato */
+.contact-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #f7f5f0; /* Mantém a cor base off-white do Figma */
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- 1. HERO SECTION (Banner de Cima) --- */
+.contact-hero {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), 
+              url('../../assets/images/recanto_por_do_sol.jpeg') no-repeat center center/cover;
+  
+  padding: 140px 20px;
+  color: #ffffff;
+  width: 100%;
+  
+  /* Garante que o banner fique na camada de baixo e não empurre a estopa de forma errada */
+  z-index: 1; 
+  margin-bottom: 0; 
+}
+
+.contact-hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha o texto à esquerda */
+  gap: 40px;
+}
+
+.contact-hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-hero-text .hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 450px;
+  line-height: 1.5;
+}
+
+
+/* --- 2. CONTAINER CENTRAL (TEXTURA + CARDS + FORMULÁRIO) --- */
+.contact-center-container {
+  width: 100%;
+  position: relative;
+  
+  /* COLOCAÇÃO EXATA DA IMAGEM: Ela inicia exatamente aqui e cobre as laterais 100% */
+  background: url('../../assets/images/background contato.png') no-repeat center top;
+  background-size: 100% auto; 
+  
+  /* Sobe a textura de estopa com o trigo para encaixar na emenda exata da foto do pôr do sol */
+  margin-top: -45px; 
+  padding: 80px 20px 60px 20px; /* O padding-top de 80px protege o trigo para os cards não ficarem em cima dele */
+  
+  /* Força a textura e os elementos internos a virem para a frente da foto do topo */
+  z-index: 10; 
+}
+
+/* Ajuste do bloco interno para centralizar os cards brancos sobre a estopa */
+.contact-info-cards,
+.contact-form-section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff; 
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(74, 62, 53, 0.08); /* Sombra suave para destacar do fundo rústico */
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+/* Cards de Informação Internos */
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.info-card:not(:last-child) {
+  border-bottom: 1px solid #eae6df;
+}
+
+.card-icon {
+  background-color: #4a3e35; /* Marrom escuro institucional */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  color: #4a3e35;
+  margin-bottom: 4px;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Formulário de Contato Interno */
+.contact-form-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #4a3e35;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dcd7cd;
+  border-radius: 12px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4a3e35;
+}
+
+/* Botão Enviar */
+.btn-submit {
+  width: 100%;
+  background-color: #3b4233; /* Verde Oliva Escuro do botão */
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #2b3126;
+}
+
+/* Aviso de rodapé do formulário */
+.form-footer-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: #6b775c;
+  font-size: 0.9rem;
+}
+
+/* --- 3. INSTAGRAM BANNER INFERIOR --- */
+.instagram-cta-banner {
+  background: url('../../assets/images/produtos-queijos-recanto.jpeg') no-repeat center center/cover;
+  border-radius: 24px;
+  margin: 0 auto 60px auto;
+  max-width: 1100px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 15; /* Garante que fique por cima da estopa se eles se cruzarem */
+}
+
+.cta-overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.2));
+  padding: 60px 40px;
+}
+
+.cta-content {
+  max-width: 500px;
+  color: #fff;
+}
+
+.cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #8a6242; /* Tom caramelo/couro do botão do insta */
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-instagram:hover {
+  background-color: #6e4e34;
+}
+
+/* RESPONSIVIDADE (MOBILE-FIRST ADAPTATIONS)  */
+@media (max-width: 768px) {
+  .contact-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-hero-text .hero-subtitle {
+    margin: 0 auto;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cta-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .btn-instagram {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-center-container {
+    background-size: cover; /* Melhora a visualização da estopa no celular */
+    padding-top: 60px;
+  }
+}

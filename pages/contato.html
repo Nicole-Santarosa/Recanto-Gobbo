@@ -114,11 +114,99 @@
   </header>
 
   <!-- Conteúdo principal da página -->
-  <main class="main-content">
-    <section class="page-section">
+  <main class="main-content contact-page">
+    
+    <section class="contact-hero">
+  <div class="contact-hero-container">
+    <div class="contact-hero-text">
       <h1>Contato</h1>
-      <p>Estrutura base da página Contato.</p>
+      <p class="hero-subtitle">Fale com a gente! Será um prazer te atender e tirar todas as suas dúvidas.</p>
+    </div>
+    </div>
+</section>
+
+    <div class="contact-center-container">
+      
+      <section class="contact-info-cards">
+        
+        <div class="info-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="card-content">
+            <h3>Telefone / WhatsApp</h3>
+            <p>(16) 99770-3595</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="card-content">
+            <h3>E-mail</h3>
+            <p>gobbonetto@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="card-content">
+            <h3>Endereço</h3>
+            <p>Gavião Peixoto, SP</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="contact-form-section">
+        <h2>Envie sua mensagem</h2>
+        
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Nome completo" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            Enviar mensagem <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="form-footer-notice">
+          <i class="fa-regular fa-comment-dots"></i>
+          <span>Respondemos o mais rápido possível!</span>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="instagram-cta-banner">
+      <div class="cta-overlay">
+        <div class="cta-content">
+          <h2>Acompanhe a rotina do campo!</h2>
+          <p>Veja o dia a dia do Recanto Gobbo, acompanhe nossos animais, produtos artesanais e momentos especiais da roça.</p>
+          <a href="https://www.instagram.com/recantogobbo" target="_blank" class="btn-instagram">
+            <i class="fa-brands fa-instagram"></i> Seguir no Instagram
+          </a>
+        </div>
+      </div>
     </section>
+
   </main>
 
 <!-- Footer principal do site -->
