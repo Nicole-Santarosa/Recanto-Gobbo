@@ -60,8 +60,8 @@
     transform: translateY(-10px);
 
     transition: opacity 0.3s ease,
-                transform 0.3s ease,
-                visibility 0.3s ease;
+      transform 0.3s ease,
+      visibility 0.3s ease;
 
     z-index: 1500;
   }
@@ -111,54 +111,59 @@
 
   /* Link ativo */
   .nav-menu a.active {
-    color: var(--color-active);
+    color: var(--color-active-menu);
   }
 
   /* Hover */
   .nav-menu a:hover {
     background: transparent;
-    color: var(--color-active);
+    color: var(--color-active-menu);
   }
 
   /* Ícones reais do menu mobile */
   .nav-menu li:nth-child(1) a::before {
-    content: "\f015"; /* casa */
+    content: "\f015";
+    /* casa */
   }
 
   .nav-menu li:nth-child(2) a::before {
-    content: "\f06c"; /* folha */
+    content: "\f06c";
+    /* folha */
   }
 
   .nav-menu li:nth-child(3) a::before {
-    content: "\f290"; /* sacola */
+    content: "\f290";
+    /* sacola */
   }
 
   .nav-menu li:nth-child(4) a::before {
-    content: "\f562"; /* sino/serviço */
+    content: "\f562";
+    /* sino/serviço */
   }
 
   .nav-menu li:nth-child(5) a::before {
-    content: "\f0e0"; /* envelope */
+    content: "\f0e0";
+    /* envelope */
   }
 
   /* Estilo dos ícones mobile */
   .nav-menu a::before {
-  width: 52px;
+    width: 52px;
 
-  display: inline-flex;
-  justify-content: center;
+    display: inline-flex;
+    justify-content: center;
 
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
 
-  font-size: 34px;
-  color: var(--color-text-primary);
-}
+    font-size: 34px;
+    color: var(--color-text-primary);
+  }
 
   /* ícones ativos ficam dourados */
-  .nav-menu a.active::before{
-  color: var(--color-active);
-}
+  .nav-menu a.active::before {
+    color: var(--color-active-menu);
+  }
 
   /* ================================
     FOOTER MOBILE
@@ -175,12 +180,10 @@
   .footer-overlay {
     padding: 70px 20px 28px;
 
-    background: linear-gradient(
-      180deg,
-      rgba(255, 253, 248, 0.38) 0%,
-      rgba(255, 253, 248, 0.28) 45%,
-      rgba(31, 61, 43, 0.28) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(255, 253, 248, 0.38) 0%,
+        rgba(255, 253, 248, 0.28) 45%,
+        rgba(31, 61, 43, 0.28) 100%);
   }
 
   /* Container vira coluna centralizada */
@@ -282,16 +285,16 @@
     color: var(--color-text-primary);
   }
 
-/* Área de redes sociais no mobile */
-.footer-social {
-  margin-top: 8px;
+  /* Área de redes sociais no mobile */
+  .footer-social {
+    margin-top: 8px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 58px);
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-}
+    display: grid;
+    grid-template-columns: repeat(4, 58px);
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
 
   /* Título "Siga-nos" acima dos ícones */
   .footer-social::before {
@@ -330,6 +333,7 @@
   .footer-social i {
     font-size: 24px;
     line-height: 1;
+    color: #fff;
   }
 
   /* Base inferior */
@@ -377,7 +381,7 @@
     display: none;
   }
 
-    /* ================================
+  /* ================================
      SUBMENU MOBILE
   ================================ */
 
@@ -408,33 +412,40 @@
     max-height: 360px;
   }
 
-  /* Cada subitem acompanha o visual do menu */
+  /* Subitens do menu mobile */
   .submenu li {
-    width: 100%;
-    border-bottom: 1px solid rgba(31, 61, 43, 0.12);
+    border-bottom: none;
   }
 
-  /* Link do submenu: mesmo estilo, menor e sem ícone */
   .submenu a {
     width: 100%;
-    padding: 14px 0 14px 80px;
+    padding: 16px 0 16px 80px;
 
     display: block;
 
     font-size: 22px;
     font-weight: 400;
+    color: var(--color-text-primary);
 
-    color: rgba(31, 61, 43, 0.78);
+    opacity: 0.75;
+
     text-shadow: none;
+    border-radius: 0;
   }
 
-  .submenu a:hover {
-    color: var(--color-active);
+  .submenu a:hover,
+  .submenu a:active {
+    color: var(--color-active-menu);
+    opacity: 1;
   }
 
-  /* Remove símbolo dos subitens */
   .submenu a::before {
     content: none !important;
     display: none !important;
+  }
+
+  /* Borda fechando o bloco de subitens */
+  .has-submenu.submenu-open {
+    border-bottom: 1px solid rgba(31, 61, 43, 0.15);
   }
 }

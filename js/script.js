@@ -54,39 +54,55 @@ submenuButtons.forEach((button) => {
   });
 });
 
-/* Aguarda o carregamento do DOM , intercepta o envio do formulário, evitando que a página recarregue e 
- permitindo que você envie os dados para uma API futuramente.*/
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contact-form');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            // Evita o comportamento padrão de recarregar a página
-            event.preventDefault();
+/* ================================
+   CARROSSEL INSTAGRAM PÁGINA SOBRE MOBILE
+================================ */
 
-            // Captura dos dados informados pelo usuário
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+const instagramCards = document.querySelector(".instagram-cards");
+const instagramPrev = document.querySelector(".instagram-slider .slider-arrow:first-child");
+const instagramNext = document.querySelector(".instagram-slider .slider-arrow:last-child");
 
-            // Exemplo de Feedback Visual para o usuário (Substitua pela lógica de envio real)
-            const submitBtn = contactForm.querySelector('.btn-submit');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = 'Enviando... <i class="fa-solid fa-spinner fa-spin"></i>';
-            submitBtn.disabled = true;
+if (instagramCards && instagramPrev && instagramNext) {
+  const getScrollAmount = () => {
+    const firstImage = instagramCards.querySelector("img");
 
-            setTimeout(() => {
-                alert(`Obrigado pelo contato, ${formData.name}! Sua mensagem sobre "${formData.subject}" foi simulada com sucesso.`);
-                
-                // Reseta o formulário e o botão
-                contactForm.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
-        });
+    if (!firstImage) return 0;
+
+    const gap = 14;
+    return firstImage.offsetWidth + gap;
+  };
+
+  instagramNext.addEventListener("click", () => {
+    const scrollAmount = getScrollAmount();
+    const maxScroll = instagramCards.scrollWidth - instagramCards.clientWidth;
+
+    if (instagramCards.scrollLeft >= maxScroll - 5) {
+      instagramCards.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      instagramCards.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
     }
-});
+  });
+
+  instagramPrev.addEventListener("click", () => {
+    const scrollAmount = getScrollAmount();
+
+    if (instagramCards.scrollLeft <= 5) {
+      instagramCards.scrollTo({
+        left: instagramCards.scrollWidth,
+        behavior: "smooth",
+      });
+    } else {
+      instagramCards.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  });
+}

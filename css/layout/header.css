@@ -72,7 +72,7 @@
 
 /* Link da página atual */
 .nav-menu a.active {
-  color: var(--color-active);
+  color: var(--color-active-menu);
 }
 
 /* Frase institucional do header */
