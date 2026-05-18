@@ -53,3 +53,56 @@ submenuButtons.forEach((button) => {
     parentItem.classList.toggle("submenu-open");
   });
 });
+
+
+/* ================================
+   CARROSSEL INSTAGRAM PÁGINA SOBRE MOBILE
+================================ */
+
+const instagramCards = document.querySelector(".instagram-cards");
+const instagramPrev = document.querySelector(".instagram-slider .slider-arrow:first-child");
+const instagramNext = document.querySelector(".instagram-slider .slider-arrow:last-child");
+
+if (instagramCards && instagramPrev && instagramNext) {
+  const getScrollAmount = () => {
+    const firstImage = instagramCards.querySelector("img");
+
+    if (!firstImage) return 0;
+
+    const gap = 14;
+    return firstImage.offsetWidth + gap;
+  };
+
+  instagramNext.addEventListener("click", () => {
+    const scrollAmount = getScrollAmount();
+    const maxScroll = instagramCards.scrollWidth - instagramCards.clientWidth;
+
+    if (instagramCards.scrollLeft >= maxScroll - 5) {
+      instagramCards.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      instagramCards.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  });
+
+  instagramPrev.addEventListener("click", () => {
+    const scrollAmount = getScrollAmount();
+
+    if (instagramCards.scrollLeft <= 5) {
+      instagramCards.scrollTo({
+        left: instagramCards.scrollWidth,
+        behavior: "smooth",
+      });
+    } else {
+      instagramCards.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  });
+}
