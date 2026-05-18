@@ -12,6 +12,12 @@
 
 html {
   background: var(--bg);
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -19,6 +25,7 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   margin: 0;
+  -ms-overflow-style: none;
 }
 
 a {
@@ -185,6 +192,15 @@ button:focus-visible {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.service-card:nth-child(2) .service-icon {
+  transform: scale(1.18);
+  transform-origin: center;
+}
+
+.service-card:nth-child(2) h2 {
+  margin-top: 9px;
 }
 
 .service-card h2 {
