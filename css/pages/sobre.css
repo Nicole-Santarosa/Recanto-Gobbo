@@ -377,6 +377,7 @@
 
 .localizacao-mapa-wrapper {
   position: relative;
+  padding-bottom: 60px; /* acomoda o card sobreposto sem deixar espaço em branco */
 }
 
 .localizacao-mapa {
@@ -391,11 +392,11 @@
 
 .localizacao-card {
   position: absolute;
-  left: 50%;
-  bottom: 35px;
-  transform: translateX(-50%);
+  left: 40px;
+  bottom: 95px;
+  transform: none;
 
-  width: 520px;
+  width: 380px;
   padding: 28px 34px;
 
   display: flex;
@@ -585,7 +586,7 @@
 
   .instagram-slider {
     grid-template-columns: 34px 1fr 34px;
-    gap: 8px;
+    gap: 12px;
   }
 
   .slider-arrow {
