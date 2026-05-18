@@ -409,33 +409,40 @@
     max-height: 360px;
   }
 
-  /* Cada subitem acompanha o visual do menu */
+  /* Subitens do menu mobile */
   .submenu li {
-    width: 100%;
-    border-bottom: 1px solid rgba(31, 61, 43, 0.12);
+    border-bottom: none;
   }
 
-  /* Link do submenu: mesmo estilo, menor e sem ícone */
   .submenu a {
     width: 100%;
-    padding: 14px 0 14px 80px;
+    padding: 16px 0 16px 80px;
 
     display: block;
 
     font-size: 22px;
     font-weight: 400;
+    color: var(--color-text-primary);
 
-    color: rgba(31, 61, 43, 0.78);
+    opacity: 0.75;
+
     text-shadow: none;
+    border-radius: 0;
   }
 
-  .submenu a:hover {
+  .submenu a:hover,
+  .submenu a:active {
     color: var(--color-active);
+    opacity: 1;
   }
 
-  /* Remove símbolo dos subitens */
   .submenu a::before {
     content: none !important;
     display: none !important;
+  }
+
+  /* Borda fechando o bloco de subitens */
+  .has-submenu.submenu-open {
+    border-bottom: 1px solid rgba(31, 61, 43, 0.15);
   }
 }
