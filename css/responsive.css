@@ -287,7 +287,7 @@
   margin-top: 8px;
 
   display: grid;
-  grid-template-columns: repeat(3, 58px);
+  grid-template-columns: repeat(4, 58px);
   justify-content: center;
   align-items: center;
   gap: 18px;
@@ -330,6 +330,7 @@
   .footer-social i {
     font-size: 24px;
     line-height: 1;
+    color: #fff;
   }
 
   /* Base inferior */
