@@ -26,11 +26,19 @@
         <a href="./servicos.html">Serviços</a>
         <a href="./contato.html">Contato</a>
       </nav>
-      <button class="menu-button" type="button" aria-label="Abrir menu">
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu"
+        aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Menu mobile">
+        <a href="../index.html">Início</a>
+        <a href="./sobre.html">O Recanto</a>
+        <a href="./produtos.html">Produtos</a>
+        <a href="./servicos.html">Serviços</a>
+        <a href="./contato.html">Contato</a>
+      </nav>
     </header>
 
     <section class="hero-servicos">
@@ -200,6 +208,38 @@
       <p class="copyright">© 2026 Recanto Gobbo<br>CNPJ: 27.228.351/0001-00</p>
     </footer>
   </main>
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const mobileMenu = document.querySelector("#mobile-menu");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      mobileMenu.classList.toggle("is-open", !isOpen);
+      document.body.classList.toggle("menu-open", !isOpen);
+    });
+
+    mobileMenu.addEventListener("click", (event) => {
+      if (event.target.tagName !== "A") {
+        return;
+      }
+
+      menuButton.setAttribute("aria-expanded", "false");
+      mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      menuButton.setAttribute("aria-expanded", "false");
+      mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    });
+  </script>
 </body>
 
 </html>
