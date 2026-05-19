@@ -12,6 +12,83 @@ body {
 }
 
 /* =========================
+   HERO PRODUTOS
+========================= */
+
+.products-hero {
+  position: relative;
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  /* IMAGEM DA HERO */
+  background-image:
+    url("../../assets/images/campoebonepr.png");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Overlay escuro */
+.products-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.58) 0%,
+      rgba(0,0,0,0.30) 45%,
+      rgba(0,0,0,0.08) 100%
+    );
+}
+
+/* Conteúdo da Hero */
+.products-hero-content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 620px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 120px 80px;
+
+  max-width: 780px;
+}
+
+/* Título */
+.products-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 74px;
+  line-height: 1.1;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  margin-bottom: 24px;
+}
+
+/* Texto */
+.products-hero-content p {
+  font-family: 'Inter', sans-serif;
+
+  font-size: 22px;
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.92);
+
+  max-width: 620px;
+
+  margin: 0;
+}
+
+/* =========================
    SCROLL PARA O PRODUTO
 ========================= */
 
@@ -24,7 +101,7 @@ body {
 ========================= */
 
 .products-section {
-  padding: 70px 20px;
+  padding: 90px 20px;
   background: #f5f2ec;
   min-height: 100vh;
 }
@@ -32,32 +109,6 @@ body {
 /* Container */
 .products-container {
   max-width: 1180px;
-}
-
-/* =========================
-   CABEÇALHO
-========================= */
-
-.products-header {
-  text-align: center;
-  margin-bottom: 55px;
-}
-
-.products-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 46px;
-  color: #4d493f;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.products-header p {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  color: #7a766d;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.7;
 }
 
 /* =========================
@@ -70,7 +121,6 @@ body {
   border-radius: 32px;
   overflow: hidden;
 
-  /* CARD MAIS COMPACTO */
   max-width: 460px;
 
   margin: 0 auto;
@@ -92,7 +142,6 @@ body {
 .product-image-wrapper {
   position: relative;
 
-  /* FUNDO PREMIUM */
   background:
     linear-gradient(
       180deg,
@@ -100,7 +149,6 @@ body {
       #c9b89d 100%
     );
 
-  /* ÁREA MAIOR */
   height: 620px;
 
   overflow: hidden;
@@ -147,10 +195,7 @@ body {
   width: 100%;
   height: 100%;
 
-  /* PREENCHE O CARD */
   object-fit: cover;
-
-  /* AJUSTE DE ENQUADRAMENTO */
   object-position: center top;
 
   display: block;
@@ -224,6 +269,8 @@ body {
 
   cursor: pointer;
 
+  text-decoration: none;
+
   box-shadow:
     0 8px 18px rgba(75, 77, 51, 0.25);
 
@@ -232,6 +279,8 @@ body {
 
 .buy-button:hover {
   transform: scale(1.02);
+
+  color: #ffffff;
 
   background:
     linear-gradient(
@@ -383,16 +432,32 @@ body {
 
 @media (max-width: 768px) {
 
-  .products-section {
-    padding: 55px 16px;
+  /* HERO */
+  .products-hero {
+    min-height: 420px;
+
+    background-position: center;
   }
 
-  .products-header h1 {
-    font-size: 34px;
+  .products-hero-content {
+    min-height: 420px;
+
+    padding: 120px 24px 60px;
   }
 
-  .products-header p {
+  .products-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .products-hero-content p {
     font-size: 16px;
+
+    max-width: 320px;
+  }
+
+  /* PRODUTOS */
+  .products-section {
+    padding: 60px 16px;
   }
 
   .product-card {
@@ -401,32 +466,6 @@ body {
 
   .product-image-wrapper {
     height: 500px;
-  }
-
-  .product-content {
-    padding: 22px;
-  }
-
-  .product-content h2 {
-    font-size: 25px;
-  }
-
-  .banner-card {
-    height: 260px;
-  }
-
-  .banner-text {
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-  }
-
-  .banner-text h3 {
-    font-size: 24px;
-  }
-
-  .banner-text p {
-    font-size: 14px;
   }
 
 }
