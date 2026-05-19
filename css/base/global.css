@@ -3,6 +3,16 @@
    Base visual geral do site
 ================================ */
 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* Estilo padrão do corpo do site */
 body {
   font-family: var(--font-body);

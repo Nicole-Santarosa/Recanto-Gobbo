@@ -1,0 +1,728 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/itspt3",
+    "id": "itspt3",
+    "slide": 2,
+    "layoutId": "b964ce9c-6dd5-476d-82f2-133a4f51a281",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "d9600d96-06e0-430a-a610-6a5c4374d8c3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b964ce9c-6dd5-476d-82f2-133a4f51a281",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "d9600d96-06e0-430a-a610-6a5c4374d8c3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "d9600d96-06e0-430a-a610-6a5c4374d8c3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/za1gvy90",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#F7F1E8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svu9knih",
+      "id": "2",
+      "name": "kicker-2-marker",
+      "bbox": [
+        64,
+        52,
+        10,
+        10
+      ],
+      "geometry": "rect",
+      "fillColor": "#B46F3A",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgn29gr2",
+      "id": "3",
+      "name": "kicker-2-label",
+      "bbox": [
+        86,
+        46,
+        380,
+        22
+      ],
+      "geometry": "rect",
+      "text": "CONTEXTO",
+      "textPreview": "CONTEXTO",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "fontSize": 10,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CONTEXTO"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CONTEXTO",
+          "runs": [
+            {
+              "index": 1,
+              "text": "CONTEXTO",
+              "fontSize": 10,
+              "typeface": "Aptos",
+              "color": "#6F6255",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1gvy90j",
+      "id": "4",
+      "bbox": [
+        64,
+        92,
+        820,
+        94
+      ],
+      "geometry": "rect",
+      "text": "O Recanto precisava comunicar melhor sua história e seus canais.",
+      "textPreview": "O Recanto precisava comunicar melhor sua história e seus canais.",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "Georgia",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "O Recanto precisava comunicar melhor"
+          },
+          {
+            "index": 2,
+            "text": "sua história e seus canais."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "O Recanto precisava comunicar melhor sua história e seus canais.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "O Recanto precisava comunicar melhor sua história e seus canais.",
+              "fontSize": 38,
+              "typeface": "Georgia",
+              "color": "#1F1712",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zidonyd0",
+      "id": "5",
+      "bbox": [
+        66,
+        218,
+        560,
+        92
+      ],
+      "geometry": "rect",
+      "text": "A ideia inicial nasceu da necessidade de organizar informações sobre o Recanto Gobbo em um espaço único, claro e fácil de acessar.",
+      "textPreview": "A ideia inicial nasceu da necessidade de organizar informações sobre o Recanto Gobbo em um espaço único, claro e fácil de acessar.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A ideia inicial nasceu da necessidade de organizar informações sobre"
+          },
+          {
+            "index": 2,
+            "text": "o Recanto Gobbo em um espaço único, claro e fácil de acessar."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A ideia inicial nasceu da necessidade de organizar informações sobre o Recanto Gobbo em um espaço único, claro e fácil de acessar.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A ideia inicial nasceu da necessidade de organizar informações sobre o Recanto Gobbo em um espaço único, claro e fácil de acessar.",
+              "fontSize": 20,
+              "typeface": "Aptos",
+              "color": "#6F6255"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36hcrmh",
+      "id": "6",
+      "bbox": [
+        682,
+        368,
+        34,
+        34
+      ],
+      "geometry": "rect",
+      "fillColor": "#B46F3A",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hoza1gvy",
+      "id": "7",
+      "bbox": [
+        738,
+        366,
+        160,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Antes",
+      "textPreview": "Antes",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Antes"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Antes",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Antes",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F1712",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5gbq1or",
+      "id": "8",
+      "bbox": [
+        738,
+        396,
+        410,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Informações espalhadas em redes sociais e contatos diretos.",
+      "textPreview": "Informações espalhadas em redes sociais e contatos diretos.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Informações espalhadas em redes sociais e contatos diretos."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Informações espalhadas em redes sociais e contatos diretos.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Informações espalhadas em redes sociais e contatos diretos.",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#6F6255"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3m94fu18",
+      "id": "9",
+      "bbox": [
+        682,
+        446,
+        34,
+        34
+      ],
+      "geometry": "rect",
+      "fillColor": "#314D32",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zidonyd0",
+      "id": "10",
+      "bbox": [
+        738,
+        444,
+        160,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Necessidade",
+      "textPreview": "Necessidade",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Necessidade"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Necessidade",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Necessidade",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F1712",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1gvy90j",
+      "id": "11",
+      "bbox": [
+        738,
+        474,
+        410,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Apresentar produtos, serviços, história e formas de contato.",
+      "textPreview": "Apresentar produtos, serviços, história e formas de contato.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Apresentar produtos, serviços, história e formas de contato."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Apresentar produtos, serviços, história e formas de contato.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Apresentar produtos, serviços, história e formas de contato.",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#6F6255"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hoza1gvy",
+      "id": "12",
+      "bbox": [
+        682,
+        524,
+        34,
+        34
+      ],
+      "geometry": "rect",
+      "fillColor": "#6C8B52",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36hcrmh",
+      "id": "13",
+      "bbox": [
+        738,
+        522,
+        160,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Público",
+      "textPreview": "Público",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Público"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Público",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Público",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F1712",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/za1gvy90",
+      "id": "14",
+      "bbox": [
+        738,
+        552,
+        410,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Clientes, parceiros e pessoas interessadas na vida no campo.",
+      "textPreview": "Clientes, parceiros e pessoas interessadas na vida no campo.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Clientes, parceiros e pessoas interessadas na vida no campo."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Clientes, parceiros e pessoas interessadas na vida no campo.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Clientes, parceiros e pessoas interessadas na vida no campo.",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#6F6255"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ap4r65wj",
+      "id": "15",
+      "bbox": [
+        64,
+        674,
+        1110,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8C8B5",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgn29gr2",
+      "id": "16",
+      "bbox": [
+        64,
+        688,
+        420,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Projeto Recanto Gobbo",
+      "textPreview": "Projeto Recanto Gobbo",
+      "resolvedFontSize": 9,
+      "resolvedTextStyle": {
+        "fontSize": 9,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Projeto Recanto Gobbo"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Projeto Recanto Gobbo",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Projeto Recanto Gobbo",
+              "fontSize": 9,
+              "typeface": "Aptos",
+              "color": "#6F6255"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svu9knih",
+      "id": "17",
+      "bbox": [
+        1135,
+        684,
+        70,
+        22
+      ],
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "right"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 13,
+              "typeface": "Aptos",
+              "color": "#6F6255",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,46 +1,106 @@
-<!doctype html>
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços | Recanto Gobbo</title>
+
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../css/servico.rodrigo.css">
+
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" 
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+<body class="servicos">
 
-<body>
-  <main class="page-shell">
-    <header class="site-header">
-      <a href="../index.html" aria-label="Ir para o início">
-        <img class="header-logo" src="../assets/images/logo-recanto-gobbo.png" alt="Recanto Gobbo">
+  <header class="header">
+    <nav class="navbar">
+
+      <a href="../index.html" class="logo">
+        <img 
+          src="../assets/images/logo-recanto-gobbo.png" 
+          alt="Logo Recanto Gobbo"
+          class="logo-image"
+        >
       </a>
-      <nav class="desktop-nav" aria-label="Menu principal">
-        <a href="../index.html">Início</a>
-        <a href="./sobre.html">O Recanto</a>
-        <a href="./produtos.html">Produtos</a>
-        <a href="./servicos.html">Serviços</a>
-        <a href="./contato.html">Contato</a>
-      </nav>
-      <button class="menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu"
-        aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Menu mobile">
-        <a href="../index.html">Início</a>
-        <a href="./sobre.html">O Recanto</a>
-        <a href="./produtos.html">Produtos</a>
-        <a href="./servicos.html">Serviços</a>
-        <a href="./contato.html">Contato</a>
-      </nav>
-    </header>
 
+      <ul class="nav-menu" id="nav-menu">
+
+        <li class="nav-item">
+          <a href="../index.html">Início</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="sobre.html">Sobre o Recanto</a>
+        </li>
+
+        <li class="nav-item has-submenu">
+          <div class="submenu-parent">
+            <a href="produtos.html">Produtos</a>
+
+            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de produtos">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <ul class="submenu">
+            <li><a href="#">Boné</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-submenu">
+          <div class="submenu-parent">
+            <a href="servicos.html" class="active">Serviços</a>
+
+            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de serviços">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <ul class="submenu">
+            <li><a href="#">Palestras</a></li>
+            <li><a href="#">Embaixadores Digitais</a></li>
+            <li><a href="#">Ações de Marca</a></li>
+            <li><a href="#">Proposta de Eventos</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="contato.html">Contato</a>
+        </li>
+
+      </ul>
+
+      <div class="header-phrase">
+        <img 
+          src="../assets/images/icone-header.png" 
+          alt="" 
+          class="header-icon"
+        >
+
+        <div>
+          <strong>A vida no campo</strong>
+          <p>é mais simples e cheia de propósito.</p>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+    </nav>
+  </header>
+
+  <main class="main-content servicos-page">
     <section class="hero-servicos">
       <div class="hero-copy">
         <h1>Serviços</h1>
@@ -55,7 +115,7 @@
         </div>
         <h2>Palestras</h2>
         <p>Histórias reais do campo, conexão com o público e inspiração através da vivência.</p>
-        <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+        <a href="https://wa.me/5516997703595?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20palestras."
           target="_blank" rel="noreferrer">Saiba mais</a>
       </article>
 
@@ -65,7 +125,7 @@
         </div>
         <h2>Embaixadores<br>Digitais</h2>
         <p>Representação autêntica de marcas com conteúdos reais e estratégicos.</p>
-        <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+        <a href="https://wa.me/5516997703595?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20receber%20uma%20proposta%20sobre%20embaixadores%20digitais."
           target="_blank" rel="noreferrer">Ver Proposta</a>
       </article>
 
@@ -75,7 +135,7 @@
         </div>
         <h2>Ações de Marca</h2>
         <p>Criação de conteúdos para fortalecer sua presença digital com alcance e engajamento.</p>
-        <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+        <a href="https://wa.me/5516997703595?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20conhecer%20os%20pacotes%20de%20a%C3%A7%C3%B5es%20de%20marca."
           target="_blank" rel="noreferrer">Conhecer Pacotes</a>
       </article>
 
@@ -85,39 +145,32 @@
         </div>
         <h2>Eventos</h2>
         <p>Presença estratégica em eventos, gerando engajamento antes, durante e depois.</p>
-        <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+        <a href="https://wa.me/5516997703595?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20solicitar%20uma%20proposta%20para%20eventos."
           target="_blank" rel="noreferrer">Solicitar Proposta</a>
       </article>
     </section>
 
-    <section class="metrics-banner" aria-label="Métricas do Instagram">
+    <section class="metrics-banner" aria-label="Destaques do Instagram">
       <a class="metric-item" href="https://www.instagram.com/recantogobbo" target="_blank" rel="noreferrer"
-        aria-label="Ver seguidores no Instagram">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M24 30c6 0 10-4 10-10S30 10 24 10 14 14 14 20s4 10 10 10Z" />
-          <path d="M40 32c5 0 9-4 9-9s-4-9-9-9" />
-          <path d="M8 52c0-9 7-16 16-16s16 7 16 16" />
-          <path d="M36 39c9 1 16 6 16 13" />
-        </svg>
-        <p><strong>209 MIL</strong><span>Seguidores</span></p>
+        aria-label="Ver comunidade no Instagram">
+        <i class="fa-solid fa-users"></i>
+        <p><strong>Comunidade ativa</strong><span>Pessoas que acompanham o Recanto</span></p>
       </a>
+
       <span class="metric-divider" aria-hidden="true"></span>
+
       <a class="metric-item" href="https://www.instagram.com/recantogobbo" target="_blank" rel="noreferrer"
-        aria-label="Ver visitas mensais no Instagram">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M4 32s10-15 28-15 28 15 28 15-10 15-28 15S4 32 4 32Z" />
-          <circle cx="32" cy="32" r="8" />
-        </svg>
-        <p><strong>4 MILHÕES</strong><span>Visitas mensais</span></p>
+        aria-label="Ver conteúdos do campo no Instagram">
+        <i class="fa-solid fa-eye"></i>
+        <p><strong>Conteúdo real</strong><span>Rotina, campo e bastidores</span></p>
       </a>
+
       <span class="metric-divider" aria-hidden="true"></span>
+
       <a class="metric-item" href="https://www.instagram.com/recantogobbo" target="_blank" rel="noreferrer"
-        aria-label="Ver visitas no perfil do Instagram">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-          <rect x="8" y="14" width="48" height="36" rx="8" />
-          <path d="M28 24v16l14-8-14-8Z" />
-        </svg>
-        <p><strong>16 MILHÕES</strong><span>Visitas no perfil</span></p>
+        aria-label="Ver presença digital do Recanto Gobbo">
+        <i class="fa-solid fa-chart-line"></i>
+        <p><strong>Presença digital</strong><span>Conexão entre marcas e público</span></p>
       </a>
     </section>
 
@@ -125,121 +178,93 @@
       <div>
         <h2>Vamos impulsionar<br>sua marca?</h2>
         <p>Entre em contato e vamos criar algo incrível juntos!</p>
-        <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+        <a href="https://wa.me/5516997703595?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20conversar%20sobre%20uma%20parceria%20com%20a%20minha%20marca."
           target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z" />
-            <path d="M9 8c.2 4 3 6.5 7 7" />
-          </svg>
+          <i class="fa-brands fa-whatsapp"></i>
           Entrar em contato
         </a>
       </div>
     </section>
-
-    <footer class="site-footer">
-      <img class="footer-logo" src="../assets/images/logo-recanto-gobbo.png" alt="Recanto Gobbo">
-      <nav class="footer-menu" aria-label="Menu do rodapé">
-        <a href="../index.html">Início</a>
-        <span>|</span>
-        <a href="./sobre.html">O Recanto</a>
-        <span>|</span>
-        <a href="./produtos.html">Produtos</a>
-        <span>|</span>
-        <a href="./servicos.html">Serviços</a>
-        <span>|</span>
-        <a href="./contato.html">Contato</a>
-      </nav>
-      <address class="contact-card">
-        <a href="https://wa.me/5516997703595" target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z" />
-            <path d="M9 8c.2 4 3 6.5 7 7" />
-          </svg>
-          (16) 99770-3595
-        </a>
-        <a href="mailto:gobbonetto@gmail.com">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 6h16v12H4z" />
-            <path d="m4 7 8 6 8-6" />
-          </svg>
-          gobbonetto@gmail.com
-        </a>
-        <a href="https://maps.app.goo.gl/Z4Uk17eoqn9L3mCQ8" target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12Z" />
-            <circle cx="12" cy="9" r="2.5" />
-          </svg>
-          Gavião Peixoto, SP
-        </a>
-      </address>
-      <div class="social-title"><span></span>Siga-nos:<span></span></div>
-      <div class="social-links" aria-label="Redes sociais">
-        <a href="https://wa.me/5516997703595" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z" />
-            <path d="M9 8c.2 4 3 6.5 7 7" />
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/recantogobbo" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="4" y="4" width="16" height="16" rx="5" />
-            <circle cx="12" cy="12" r="3.5" />
-            <circle cx="17" cy="7" r="1" />
-          </svg>
-        </a>
-        <a href="https://www.tiktok.com/@nettogobbo" target="_blank" rel="noreferrer" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 4v10.2a4 4 0 1 1-3-3.9" />
-            <path d="M14 4c1 3 2.8 4.5 6 4.8" />
-          </svg>
-        </a>
-        <a href="https://www.facebook.com/recantogobbo/" target="_blank" rel="noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z" />
-          </svg>
-        </a>
-        <a href="https://www.youtube.com/@RecantoGobbo" target="_blank" rel="noreferrer" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="6" width="18" height="12" rx="4" />
-            <path d="m10 9 5 3-5 3V9Z" />
-          </svg>
-        </a>
-      </div>
-      <p class="copyright">© 2026 Recanto Gobbo<br>CNPJ: 27.228.351/0001-00</p>
-    </footer>
   </main>
-  <script>
-    const menuButton = document.querySelector(".menu-button");
-    const mobileMenu = document.querySelector("#mobile-menu");
 
-    menuButton.addEventListener("click", () => {
-      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+<footer class="footer">
 
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-      mobileMenu.classList.toggle("is-open", !isOpen);
-      document.body.classList.toggle("menu-open", !isOpen);
-    });
+  <div class="footer-overlay">
 
-    mobileMenu.addEventListener("click", (event) => {
-      if (event.target.tagName !== "A") {
-        return;
-      }
+    <div class="footer-container">
 
-      menuButton.setAttribute("aria-expanded", "false");
-      mobileMenu.classList.remove("is-open");
-      document.body.classList.remove("menu-open");
-    });
+      <div class="footer-brand">
+        <img 
+          src="../assets/images/logo-recanto-gobbo.png" 
+          alt="Logo Recanto Gobbo"
+          class="footer-logo-image"
+        >
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key !== "Escape") {
-        return;
-      }
+        <p>
+          Produtos artesanais com tradição, qualidade e sabor do interior.
+        </p>
+      </div>
 
-      menuButton.setAttribute("aria-expanded", "false");
-      mobileMenu.classList.remove("is-open");
-      document.body.classList.remove("menu-open");
-    });
-  </script>
+      <div class="footer-column">
+        <h3>Navegação</h3>
+
+        <nav class="footer-links">
+          <a href="../index.html">Início</a>
+          <a href="sobre.html">Sobre o Recanto</a>
+          <a href="produtos.html">Produtos</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contato</h3>
+
+        <div class="footer-contact">
+          <p>WhatsApp: (16) 99770-3595</p>
+          <p>Email: gobbonetto@gmail.com</p>
+          <p>Localização: Gavião Peixoto, SP</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Siga-nos</h3>
+
+        <div class="footer-social">
+
+          <a href="https://www.instagram.com/recantogobbo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://wa.me/5516997703595?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20falar%20com%20voc%C3%AAs%20pelo%20WhatsApp." aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+
+          <a href="https://www.tiktok.com/@nettogobbo?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+          </a>
+
+          <a href="https://www.youtube.com/@RecantoGobbo" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Recanto Gobbo</p>
+      <p>CNPJ: 27.228.351/0001-00</p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
 </body>
-
 </html>
