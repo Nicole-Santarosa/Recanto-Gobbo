@@ -22,20 +22,29 @@ body.produtos .main-content {
 .products-hero {
   position: relative;
 
-  min-height: 520px;
+  /* HERO PREMIUM */
+  height: calc(100vh - var(--header-height));
+
+  min-height: 560px;
+
   margin-top: var(--header-height);
 
   overflow: hidden;
 
   display: flex;
-  align-items: center;
+
+  /* AJUSTADO: Centraliza o bloco de texto verticalmente na tela */
+  align-items: center; 
 
   background-image:
-    url("../../assets/images/campoebonepr.png");
+    url("../../assets/images/campoebone.png");
 
-  background-size: 100%;
+  /* AGORA A IMAGEM HERO-READY FUNCIONA */
+  background-size: cover;
 
-  background-position: center 22%;
+  /* AJUSTADO: Alinha pelo canto inferior direito e afasta 3% das bordas 
+     para o boné aparecer por completo e respirar */
+  background-position: right 3% bottom 3%;
 
   background-repeat: no-repeat;
 }
@@ -43,14 +52,15 @@ body.produtos .main-content {
 /* Overlay cinematográfico */
 .products-hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
     linear-gradient(
       90deg,
       rgba(0,0,0,0.72) 0%,
-      rgba(0,0,0,0.50) 35%,
-      rgba(0,0,0,0.16) 100%
+      rgba(0,0,0,0.48) 34%,
+      rgba(0,0,0,0.08) 100%
     );
 
   z-index: 1;
@@ -60,19 +70,20 @@ body.produtos .main-content {
 .products-hero-glow {
   position: absolute;
 
-  width: 600px;
-  height: 600px;
+  width: 650px;
+  height: 650px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(184,134,11,0.18) 0%,
+      rgba(184,134,11,0.14) 0%,
       rgba(184,134,11,0) 70%
     );
 
   right: -120px;
+
   top: 50%;
 
   transform: translateY(-50%);
@@ -83,20 +94,28 @@ body.produtos .main-content {
 /* Conteúdo */
 .products-hero-content {
   position: relative;
+
   z-index: 2;
 
-  max-width: 760px;
+  width: 100%;
 
-  padding: 70px 80px 50px;
+  max-width: 620px;
+
+  padding-left: 80px;
+
+  padding-right: 40px;
+
+  /* AJUSTADO: Removido o padding do topo para o Flexbox alinhar perfeitamente no meio */
+  padding-top: 0; 
 }
 
 /* Tag superior */
 .hero-tag {
   display: inline-block;
 
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
-  padding: 9px 16px;
+  padding: 10px 18px;
 
   border-radius: 50px;
 
@@ -111,7 +130,9 @@ body.produtos .main-content {
   color: #d4b06a;
 
   font-size: 12px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
 
   text-transform: uppercase;
@@ -123,15 +144,15 @@ body.produtos .main-content {
 .products-hero-content h1 {
   font-family: 'Playfair Display', serif;
 
-  font-size: 56px;
+  font-size: 64px;
 
-  line-height: 1.08;
+  line-height: 0.96;
 
   font-weight: 700;
 
   color: #ffffff;
 
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   text-shadow:
     0 10px 30px rgba(0,0,0,0.35);
@@ -140,6 +161,7 @@ body.produtos .main-content {
 /* Linha elegante */
 .hero-line {
   width: 90px;
+
   height: 2px;
 
   background:
@@ -160,16 +182,17 @@ body.produtos .main-content {
 
   line-height: 1.8;
 
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.92);
 
-  max-width: 520px;
+  max-width: 500px;
 
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 /* Botões */
 .hero-buttons {
   display: flex;
+
   gap: 16px;
 
   flex-wrap: wrap;
@@ -177,7 +200,7 @@ body.produtos .main-content {
 
 /* Botão principal */
 .hero-button-primary {
-  padding: 13px 26px;
+  padding: 14px 28px;
 
   border-radius: 60px;
 
@@ -195,6 +218,7 @@ body.produtos .main-content {
   font-family: 'Inter', sans-serif;
 
   font-size: 14px;
+
   font-weight: 600;
 
   box-shadow:
@@ -214,7 +238,7 @@ body.produtos .main-content {
 
 /* Botão secundário */
 .hero-button-secondary {
-  padding: 13px 26px;
+  padding: 14px 28px;
 
   border-radius: 60px;
 
@@ -233,6 +257,7 @@ body.produtos .main-content {
   font-family: 'Inter', sans-serif;
 
   font-size: 14px;
+
   font-weight: 500;
 
   transition: 0.35s ease;
@@ -254,27 +279,37 @@ body.produtos .main-content {
 @media (max-width: 768px) {
 
   .products-hero {
-    min-height: 460px;
+    height: 92vh;
+
+    min-height: 640px;
 
     background-size: cover;
 
-    background-position: center center;
+    /* Força o enquadramento no canto inferior direito para o boné 
+       continuar sendo o foco principal em telas menores */
+    background-position: right bottom;
   }
 
   .products-hero-content {
-    padding: 90px 24px 45px;
+
+    max-width: 100%;
+
+    padding:
+      115px 24px 50px;
   }
 
   .products-hero-content h1 {
     font-size: 42px;
 
-    line-height: 1.08;
+    line-height: 1.02;
   }
 
   .products-hero-content p {
     font-size: 15px;
 
     line-height: 1.7;
+
+    max-width: 100%;
   }
 
   .hero-buttons {
