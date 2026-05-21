@@ -11,6 +11,10 @@ body {
   padding: 0;
 }
 
+body.produtos .main-content {
+  padding-top: 0;
+}
+
 /* =========================
    HERO PRODUTOS
 ========================= */
@@ -18,20 +22,25 @@ body {
 .products-hero {
   position: relative;
 
-  min-height: 620px;
+  min-height: 520px;
+  margin-top: var(--header-height);
 
   overflow: hidden;
 
-  /* IMAGEM DA HERO */
+  display: flex;
+  align-items: center;
+
   background-image:
     url("../../assets/images/campoebonepr.png");
 
-  background-position: center center;
-  background-size: cover;
+  background-size: 100%;
+
+  background-position: center 22%;
+
   background-repeat: no-repeat;
 }
 
-/* Overlay escuro */
+/* Overlay cinematográfico */
 .products-hero-overlay {
   position: absolute;
   inset: 0;
@@ -39,37 +48,106 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,0.58) 0%,
-      rgba(0,0,0,0.30) 45%,
-      rgba(0,0,0,0.08) 100%
+      rgba(0,0,0,0.72) 0%,
+      rgba(0,0,0,0.50) 35%,
+      rgba(0,0,0,0.16) 100%
     );
+
+  z-index: 1;
 }
 
-/* Conteúdo da Hero */
+/* Glow dourado */
+.products-hero-glow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(184,134,11,0.18) 0%,
+      rgba(184,134,11,0) 70%
+    );
+
+  right: -120px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 1;
+}
+
+/* Conteúdo */
 .products-hero-content {
   position: relative;
   z-index: 2;
 
-  min-height: 620px;
+  max-width: 760px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 70px 80px 50px;
+}
 
-  padding: 120px 80px;
+/* Tag superior */
+.hero-tag {
+  display: inline-block;
 
-  max-width: 780px;
+  margin-bottom: 20px;
+
+  padding: 9px 16px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+
+  border:
+    1px solid rgba(255,255,255,0.10);
+
+  color: #d4b06a;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-family: 'Inter', sans-serif;
 }
 
 /* Título */
 .products-hero-content h1 {
   font-family: 'Playfair Display', serif;
 
-  font-size: 74px;
-  line-height: 1.1;
+  font-size: 56px;
+
+  line-height: 1.08;
+
   font-weight: 700;
 
   color: #ffffff;
+
+  margin-bottom: 20px;
+
+  text-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Linha elegante */
+.hero-line {
+  width: 90px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b8860b,
+      rgba(184,134,11,0)
+    );
 
   margin-bottom: 24px;
 }
@@ -78,14 +156,153 @@ body {
 .products-hero-content p {
   font-family: 'Inter', sans-serif;
 
-  font-size: 22px;
+  font-size: 17px;
+
   line-height: 1.8;
 
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.88);
 
-  max-width: 620px;
+  max-width: 520px;
 
-  margin: 0;
+  margin-bottom: 30px;
+}
+
+/* Botões */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+
+  flex-wrap: wrap;
+}
+
+/* Botão principal */
+.hero-button-primary {
+  padding: 13px 26px;
+
+  border-radius: 60px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b8860b,
+      #d4a437
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: 'Inter', sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow:
+    0 10px 22px rgba(184,134,11,0.25);
+
+  transition: 0.35s ease;
+}
+
+.hero-button-primary:hover {
+  transform: translateY(-3px);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 16px 30px rgba(184,134,11,0.30);
+}
+
+/* Botão secundário */
+.hero-button-secondary {
+  padding: 13px 26px;
+
+  border-radius: 60px;
+
+  border:
+    1px solid rgba(255,255,255,0.18);
+
+  background:
+    rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: 'Inter', sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.35s ease;
+}
+
+.hero-button-secondary:hover {
+  background:
+    rgba(255,255,255,0.10);
+
+  transform: translateY(-3px);
+
+  color: #ffffff;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+  .products-hero {
+    min-height: 460px;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+  .products-hero-content {
+    padding: 90px 24px 45px;
+  }
+
+  .products-hero-content h1 {
+    font-size: 42px;
+
+    line-height: 1.08;
+  }
+
+  .products-hero-content p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-button-primary,
+  .hero-button-secondary {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-tag {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .products-hero-glow {
+    width: 240px;
+    height: 240px;
+
+    right: -60px;
+  }
+
 }
 
 /* =========================
@@ -109,6 +326,30 @@ body {
 /* Container */
 .products-container {
   max-width: 1180px;
+}
+
+.products-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.products-container .col-lg-4,
+.products-container .col-md-6 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .products-container .col-md-6 {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .products-container .col-lg-4 {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 /* =========================
@@ -360,70 +601,6 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.7;
-}
-
-/* =========================
-   SUBMENU
-========================= */
-
-.has-submenu {
-  position: relative;
-}
-
-.submenu {
-  position: absolute;
-
-  top: 100%;
-  left: 0;
-
-  min-width: 220px;
-
-  background: #ffffff;
-
-  border-radius: 18px;
-
-  padding: 18px 0;
-
-  list-style: none;
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.08);
-
-  opacity: 0;
-  visibility: hidden;
-
-  transform: translateY(10px);
-
-  transition: 0.3s ease;
-
-  z-index: 1000;
-}
-
-.has-submenu:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-
-  transform: translateY(0);
-}
-
-.submenu li a {
-  display: block;
-
-  padding: 12px 22px;
-
-  color: #4d493f;
-  text-decoration: none;
-
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-
-  transition: 0.3s ease;
-}
-
-.submenu li a:hover {
-  background: #f5f2ec;
-  color: #b8860b;
 }
 
 /* =========================
