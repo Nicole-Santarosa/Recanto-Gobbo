@@ -142,3 +142,61 @@ if (instagramCards && instagramPrev && instagramNext) {
     }
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ... SEUS CÓDIGOS ANTERIORES DO MENU HAMBÚRGUER OU SUBMENUS FICAM AQUI ...
+
+
+    // ==========================================================================
+    // LÓGICA DO FORMULÁRIO DE CONTATO (WHATSAPP & VALIDAÇÃO)
+    // ==========================================================================
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm && formStatus) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita recarregar a página
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validação manual cobrada
+            if (!name || !email || !message) {
+                formStatus.textContent = "Preencher todos os campos";
+                formStatus.className = "form-status error";
+                return;
+            }
+
+            // Efeito visual temporário no botão
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Enviando... <i class="fa-solid fa-spinner fa-spin"></i>';
+            submitBtn.disabled = true;
+
+            // Configuração do link direto do WhatsApp do Recanto Gobbo
+            const phoneNumber = "5516997703595"; 
+            const textMessage = `Olá, Recanto Gobbo!\n\n` +
+                                `Nova mensagem enviada pelo site:\n` +
+                                `*Nome:* ${name}\n` +
+                                `*E-mail:* ${email}\n` +
+                                `*Mensagem:* ${message}`;
+
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(textMessage)}`;
+
+            setTimeout(() => {
+                // Mensagem limpa na tela substituindo o alert de navegador
+                formStatus.textContent = "Mensagem enviada ao Recanto Gobbo";
+                formStatus.className = "form-status success";
+
+                contactForm.reset(); // Limpa as caixas de texto
+                
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+
+                // Redireciona para o WhatsApp
+                window.open(whatsappUrl, '_blank');
+            }, 1200);
+        });
+    }
+}); // <--- Certifique-se de que este fechamento é a última linha do arquivo

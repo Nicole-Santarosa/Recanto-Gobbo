@@ -58,7 +58,7 @@
   background-size: 100% auto; 
   
   /* Sobe a textura de estopa com o trigo para encaixar na emenda exata da foto do pôr do sol */
-  margin-top: -45px; 
+  margin-top: -75px; 
   padding: 80px 20px 60px 20px; /* O padding-top de 80px protege o trigo para os cards não ficarem em cima dele */
   
   /* Força a textura e os elementos internos a virem para a frente da foto do topo */
@@ -267,4 +267,38 @@
     background-size: cover; /* Melhora a visualização da estopa no celular */
     padding-top: 60px;
   }
+}
+/* ==========================================================================
+   FEEDBACK VISUAL DO FORMULÁRIO DE CONTATO (Avisos e Sucesso)
+   ========================================================================== */
+.form-status {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  display: none; /* Escondido por padrão, o JS ativa quando necessário */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Estado de Erro - Campos vazios */
+.form-status.error {
+  display: block;
+  background-color: #fdf2f2;
+  color: #de3b3b;
+  border: 1px solid #fae7e7;
+}
+
+/* Estado de Sucesso - Enviado */
+.form-status.success {
+  display: block;
+  background-color: #f3f8f2;
+  color: #4a6b42; /* Tom verde oliva que combina com o Recanto */
+  border: 1px solid #e1eee0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
