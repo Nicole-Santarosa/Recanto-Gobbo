@@ -198,19 +198,50 @@
             <div id="bone" class="product-card">
 
               <!-- Imagem -->
-              <div class="product-image-container">
+<div class="product-image-wrapper">
 
-                <span class="product-badge">
-                  Exclusivo
-                </span>
+  <span class="product-badge">
+    Exclusivo
+  </span>
 
-                <img 
-                  src="../assets/images/bone2.jpeg" 
-                  alt="Boné Recanto Gobbo"
-                  class="product-image"
-                >
+  <!-- IMAGEM PRINCIPAL -->
+  <img 
+    id="mainProductImage"
+    src="../assets/images/bone1.jpeg" 
+    alt="Boné Recanto Gobbo"
+    class="product-image"
+  >
 
-              </div>
+  <!-- MINIATURAS -->
+  <div class="product-thumbnails">
+
+    <img 
+      src="../assets/images/bone1.jpeg"
+      class="thumb active-thumb"
+      onclick="changeImage(this)"
+    >
+
+    <img 
+      src="../assets/images/bone2.jpeg"
+      class="thumb"
+      onclick="changeImage(this)"
+    >
+
+    <img 
+      src="../assets/images/bone3.jpeg"
+      class="thumb"
+      onclick="changeImage(this)"
+    >
+
+    <img 
+      src="../assets/images/bone4.jpeg"
+      class="thumb"
+      onclick="changeImage(this)"
+    >
+
+  </div>
+
+</div>
 
               <!-- Conteúdo -->
               <div class="product-content">
@@ -238,7 +269,9 @@
 
             </div>
 
-          </div>
+          </div>  
+          
+        </div>
 
 
       <!-- =========================
@@ -253,7 +286,7 @@
 
             <!-- Imagem -->
             <img 
-              src="../assets/images/netoecampo.jpeg" 
+              src="../assets/images/porteira2.png" 
               alt="Homem do campo"
               class="banner-image"
             >
@@ -264,13 +297,18 @@
             <!-- Texto -->
             <div class="banner-text">
 
+              <div class="banner-tag">
+                VIDA NO CAMPO
+              </div> 
+
               <h3>
-                Produtos feitos com propósito
+                O campo mora nos detalhes.
               </h3>
 
               <p>
-                Do nosso sítio para sua vida.
-                Apoie o que é simples, verdadeiro e cheio de história.
+                Mais do que produtos,
+                uma forma simples e verdadeira de levar
+                a essência da vida no campo para perto de você.
               </p>
 
             </div>
