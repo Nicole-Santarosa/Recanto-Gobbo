@@ -142,3 +142,18 @@ if (instagramCards && instagramPrev && instagramNext) {
     }
   });
 }
+
+//card produtos
+function changeImage(element){
+
+  const mainImage = document.getElementById("mainProductImage");
+
+  mainImage.src = element.src;
+
+  document.querySelectorAll(".thumb").forEach(img => {
+    img.classList.remove("active-thumb");
+  });
+
+  element.classList.add("active-thumb");
+
+}
