@@ -2,418 +2,437 @@
 <html lang="pt-BR">
 <head>
 
-  <!-- Configuração de caracteres -->
-  <meta charset="UTF-8">
+    <!-- Configuração de caracteres -->
+    <meta charset="UTF-8">
 
-  <!-- Responsividade -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Título -->
-  <title>Produtos | Recanto Gobbo</title>
+    <!-- Título -->
+    <title>Produtos | Recanto Gobbo</title>
 
-  <link rel="icon" type="image/png" href="../assets/images/logo-recanto-gobbo.png">
+    <link rel="icon" type="image/png" href="../assets/images/logo-recanto-gobbo.png">
 
-  <!-- Font Awesome -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" 
-    rel="stylesheet"
-  >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body class="produtos">
 
-  <!-- Header principal do site -->
-  <header class="header">
-    <nav class="navbar">
+    <!-- Header principal do site -->
+    <header class="header">
+        <nav class="navbar">
 
-      <!-- Logo principal -->
-      <a href="../index.html" class="logo">
-        <img 
-          src="../assets/images/logo-recanto-gobbo.png" 
-          alt="Logo Recanto Gobbo"
-          class="logo-image"
-        >
-      </a>
+            <!-- Logo principal -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo-recanto-gobbo.png"
+                     alt="Logo Recanto Gobbo"
+                     class="logo-image">
+            </a>
 
-      <!-- Menu principal -->
-      <ul class="nav-menu" id="nav-menu">
+            <!-- Menu principal -->
+            <ul class="nav-menu" id="nav-menu">
 
-        <!-- Link para a página inicial -->
-        <li class="nav-item">
-          <a href="../index.html">Início</a>
-        </li>
+                <!-- Link para a página inicial -->
+                <li class="nav-item">
+                    <a href="../index.html">Início</a>
+                </li>
 
-        <!-- Link para a página Sobre -->
-        <li class="nav-item">
-          <a href="sobre.html">Sobre o Recanto</a>
-        </li>
+                <!-- Link para a página Sobre -->
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre o Recanto</a>
+                </li>
 
-        <!-- Item com submenu de produtos -->
-        <li class="nav-item has-submenu">
-          <div class="submenu-parent">
-            <a href="produtos.html" class="active">Produtos</a>
+                <!-- Item com submenu de produtos -->
+                <li class="nav-item has-submenu">
+                    <div class="submenu-parent">
+                        <a href="produtos.html" class="active">Produtos</a>
 
-            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de produtos">
-              <i class="fa-solid fa-chevron-down"></i>
+                        <button class="submenu-toggle" type="button" aria-label="Abrir submenu de produtos">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <ul class="submenu">
+                        <li><a href="produtos.html#bone">Boné</a></li>
+                    </ul>
+                </li>
+
+                <!-- Item com submenu de serviços -->
+                <li class="nav-item has-submenu">
+                    <div class="submenu-parent">
+                        <a href="servicos.html">Serviços</a>
+
+                        <button class="submenu-toggle" type="button" aria-label="Abrir submenu de serviços">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <ul class="submenu">
+                        <li><a href="servicos.html#palestras">Palestras</a></li>
+                        <li><a href="servicos.html#embaixadores">Embaixadores Digitais</a></li>
+                        <li><a href="servicos.html#acoes">Ações de Marca</a></li>
+                        <li><a href="servicos.html#eventos">Proposta de Eventos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Link para a página Contato -->
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+
+            </ul>
+
+            <!-- Frase institucional do header desktop -->
+            <div class="header-phrase">
+                <!-- Ícone decorativo da frase do header -->
+                <img src="../assets/images/icone-header.png"
+                     alt=""
+                     class="header-icon">
+                <div>
+                    <strong>A vida no campo</strong>
+                    <p>é mais simples e cheia de propósito.</p>
+                </div>
+            </div>
+
+            <!-- Botão hambúrguer mobile -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                ☰
             </button>
-          </div>
 
-          <ul class="submenu">
-            <li><a href="produtos.html#bone">Boné</a></li>
-          </ul>
-        </li>
-
-        <!-- Item com submenu de serviços -->
-        <li class="nav-item has-submenu">
-          <div class="submenu-parent">
-            <a href="servicos.html">Serviços</a>
-
-            <button class="submenu-toggle" type="button" aria-label="Abrir submenu de serviços">
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-
-          <ul class="submenu">
-            <li><a href="servicos.html#palestras">Palestras</a></li>
-            <li><a href="servicos.html#embaixadores">Embaixadores Digitais</a></li>
-            <li><a href="servicos.html#acoes">Ações de Marca</a></li>
-            <li><a href="servicos.html#eventos">Proposta de Eventos</a></li>
-          </ul>
-        </li>
-
-        <!-- Link para a página Contato -->
-        <li class="nav-item">
-          <a href="contato.html">Contato</a>
-        </li>
-
-      </ul>
-
-      <!-- Frase institucional do header desktop -->
-      <div class="header-phrase">
-        <!-- Ícone decorativo da frase do header -->
-        <img 
-          src="../assets/images/icone-header.png" 
-            alt="" 
-            class="header-icon"
-        >
-        <div>
-          <strong>A vida no campo</strong>
-          <p>é mais simples e cheia de propósito.</p>
-        </div>
-      </div>
-
-      <!-- Botão hambúrguer mobile -->
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-        ☰
-      </button>
-
-    </nav>
-  </header>
-
-  <!-- =========================
-       MAIN
-  ========================== -->
-
-  <main class="main-content">
-
-<!-- =========================
-         HERO
-========================== -->
-
-<section class="products-hero">
-
-  <!-- Overlay cinematográfico -->
-  <div class="products-hero-overlay"></div>
-
-  <!-- Glow -->
-  <div class="products-hero-glow"></div>
-
-  <!-- Conteúdo -->
-  <div class="products-hero-content">
-
-    <span class="hero-tag">
-      Tradição • Identidade • Campo
-    </span>
-
-    <h1>
-      O campo como<br>
-      estilo de vida.
-    </h1>
-
-    <div class="hero-line"></div>
-
-    <p>
-      Produtos criados para quem valoriza autenticidade,
-      tradição e a essência simples da vida no campo.
-    </p>
-
-    <!-- CTA -->
-    <div class="hero-buttons">
-
-      <a href="#bone" class="hero-button-primary">
-        Explorar produtos
-      </a>
-
-      <a 
-        href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
-        target="_blank"
-        class="hero-button-secondary"
-      >
-        Falar conosco
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
+        </nav>
+    </header>
 
     <!-- =========================
-         PRODUTOS
+         MAIN
     ========================== -->
 
-    <section class="products-section">
+    <main class="main-content">
 
-      <!-- Produtos -->
-      <div class="container products-container">
+        <!-- =========================
+                 HERO
+        ========================== -->
 
-        <div class="row justify-content-center g-4">
+        <section class="products-hero">
 
-          <!-- CARD 1 -->
-          <div class="col-lg-4 col-md-6">
+            <!-- Overlay cinematográfico -->
+            <div class="products-hero-overlay"></div>
 
-            <div id="bone" class="product-card">
+            <!-- Glow -->
+            <div class="products-hero-glow"></div>
 
-              <!-- Imagem -->
-<div class="product-image-wrapper">
+            <!-- Conteúdo -->
+            <div class="products-hero-content">
 
-  <span class="product-badge">
-    Exclusivo
-  </span>
+                <span class="hero-tag">
+                    Tradição • Identidade • Campo
+                </span>
 
-  <!-- IMAGEM PRINCIPAL -->
-  <img 
-    id="mainProductImage"
-    src="../assets/images/bone1.jpeg" 
-    alt="Boné Recanto Gobbo"
-    class="product-image"
-  >
+                <h1>
+                    O campo como<br>
+                    estilo de vida.
+                </h1>
 
-  <!-- MINIATURAS -->
-  <div class="product-thumbnails">
+                <div class="hero-line"></div>
 
-    <img 
-      src="../assets/images/bone1.jpeg"
-      class="thumb active-thumb"
-      onclick="changeImage(this)"
-    >
-
-    <img 
-      src="../assets/images/bone2.jpeg"
-      class="thumb"
-      onclick="changeImage(this)"
-    >
-
-    <img 
-      src="../assets/images/bone3.jpeg"
-      class="thumb"
-      onclick="changeImage(this)"
-    >
-
-    <img 
-      src="../assets/images/bone4.jpeg"
-      class="thumb"
-      onclick="changeImage(this)"
-    >
-
-  </div>
-
-</div>
-
-              <!-- Conteúdo -->
-              <div class="product-content">
-
-                <h2>Boné Recanto Gobbo</h2>
-
-                <p class="product-price">
-                  R$ 80,00
+                <p>
+                    Produtos criados para quem valoriza autenticidade,
+                    tradição e a essência simples da vida no campo.
                 </p>
 
-                <!-- BOTÃO WHATSAPP -->
-                <a 
-                  href="https://wa.me/5516997703595?text=Ol%C3%A1,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20comprar%20o%20Bon%C3%A9%20Recanto%20Gobbo."
-                  class="buy-button"
-                  target="_blank"
-                >
+                <!-- CTA -->
+                <div class="hero-buttons">
 
-                  <i class="fa-solid fa-bag-shopping"></i>
+                    <a href="#bone" class="hero-button-primary">
+                        Explorar produtos
+                    </a>
 
-                  Comprar agora
+                    <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+                       target="_blank"
+                       class="hero-button-secondary">
+                        Falar conosco
+                    </a>
 
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>  
-          
-        </div>
-
-
-      <!-- =========================
-           BANNER
-      ========================== -->
-
-      <div class="container products-container">
-
-        <div class="products-banner">
-
-          <div class="banner-card">
-
-            <!-- Imagem -->
-            <img 
-              src="../assets/images/porteira2.png" 
-              alt="Homem do campo"
-              class="banner-image"
-            >
-
-            <!-- Overlay -->
-            <div class="banner-overlay"></div>
-
-            <!-- Texto -->
-            <div class="banner-text">
-
-              <div class="banner-tag">
-                VIDA NO CAMPO
-              </div> 
-
-              <h3>
-                O campo mora nos detalhes.
-              </h3>
-
-              <p>
-                Mais do que produtos,
-                uma forma simples e verdadeira de levar
-                a essência da vida no campo para perto de você.
-              </p>
+                </div>
 
             </div>
 
-          </div>
+        </section>
+
+        <!-- =========================
+             PRODUTOS
+        ========================== -->
+
+        <section class="products-section">
+
+            <!-- Produtos -->
+            <div class="container products-container">
+
+                <div class="row justify-content-center g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-lg-4 col-md-6">
+
+                        <div id="bone" class="product-card">
+
+                            <!-- Imagem -->
+                            <div class="product-image-wrapper">
+
+                                <span class="product-badge">
+                                    Exclusivo
+                                </span>
+
+                                <!-- IMAGEM PRINCIPAL -->
+                                <img id="mainProductImage"
+                                     src="../assets/images/bone1.jpeg"
+                                     alt="Boné Recanto Gobbo"
+                                     class="product-image">
+
+                                <!-- MINIATURAS -->
+                                <div class="product-thumbnails">
+
+                                    <img src="../assets/images/bone1.jpeg"
+                                         class="thumb active-thumb"
+                                         onclick="changeImage(this)">
+
+                                    <img src="../assets/images/bone2.jpeg"
+                                         class="thumb"
+                                         onclick="changeImage(this)">
+
+                                    <img src="../assets/images/bone3.jpeg"
+                                         class="thumb"
+                                         onclick="changeImage(this)">
+
+                                    <img src="../assets/images/bone4.jpeg"
+                                         class="thumb"
+                                         onclick="changeImage(this)">
+
+                                </div>
+
+                            </div>
+
+                            <!-- Conteúdo -->
+                            <div class="product-content">
+
+                                <h2>Boné Recanto Gobbo</h2>
+
+                                <p class="product-price">
+                                    R$ 80,00
+                                </p>
+
+                                <!-- BOTÃO WHATSAPP -->
+                                <a href="https://wa.me/5516997703595?text=Ol%C3%A1,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20comprar%20o%20Bon%C3%A9%20Recanto%20Gobbo."
+                                   class="buy-button"
+                                   target="_blank">
+
+                                    <i class="fa-solid fa-bag-shopping"></i>
+
+                                    Comprar agora
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     BANNER
+                ========================== -->
+
+                <div class="container products-container">
+
+                    <div class="products-banner">
+
+                        <div class="banner-card">
+
+                            <!-- Imagem -->
+                            <img src="../assets/images/porteira2.png"
+                                 alt="Homem do campo"
+                                 class="banner-image">
+
+                            <!-- Overlay -->
+                            <div class="banner-overlay"></div>
+
+                            <!-- Texto -->
+                            <div class="banner-text">
+
+                                <div class="banner-tag">
+                                    VIDA NO CAMPO
+                                </div>
+
+                                <h3>
+                                    O campo mora nos detalhes.
+                                </h3>
+
+                                <p>
+                                    Mais do que produtos,
+                                    uma forma simples e verdadeira de levar
+                                    a essência da vida no campo para perto de você.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer principal do site -->
+    <footer class="footer">
+
+        <!-- Camada por cima da imagem de fundo para melhorar leitura -->
+        <div class="footer-overlay"></div>
+
+        <!-- Container principal do footer -->
+        <div class="footer-container">
+
+            <!-- Coluna da marca -->
+            <div class="footer-brand">
+                <img src="../assets/images/logo-recanto-gobbo.png"
+                     alt="Logo Recanto Gobbo"
+                     class="footer-logo-image">
+
+                <p>
+                    Produtos artesanais com tradição, qualidade e sabor do interior.
+                </p>
+            </div>
+
+            <!-- Coluna de navegação -->
+            <div class="footer-column footer-nav-column">
+
+                <nav class="footer-links">
+                    <a href="../index.html">Início</a>
+                    <a href="sobre.html">Sobre o Recanto</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="contato.html">Contato</a>
+                </nav>
+            </div>
+
+            <!-- Coluna de contato -->
+            <div class="footer-column footer-contact-column">
+                <h3>Contato</h3>
+
+                <div class="footer-contact">
+                    <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        WhatsApp: (16) 99770-3595
+                    </a>
+
+                    <a href="mailto:gobbonetto@gmail.com?subject=Contato"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Email: gobbonetto@gmail.com
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/Z4Uk17eoqn9L3mCQ8"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Localização: Gavião Peixoto, SP
+                    </a>
+                </div>
+            </div>
+
+            <!-- Coluna de redes sociais -->
+            <div class="footer-column footer-social-column">
+
+                <img src="../assets/images/social-title.png"
+                     alt="Siga-nos"
+                     class="footer-social-title-image">
+
+                <div class="footer-social">
+
+                    <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações."
+                       aria-label="WhatsApp"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="../assets/images/social-icon-whatsapp.png"
+                             alt="WhatsApp"
+                             class="footer-social-icon-image">
+                    </a>
+
+                    <a href="https://www.instagram.com/recantogobbo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                       aria-label="Instagram"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="../assets/images/social-icon-instagram.png"
+                             alt="Instagram"
+                             class="footer-social-icon-image">
+                    </a>
+
+                    <a href="https://www.tiktok.com/@nettogobbo?is_from_webapp=1&sender_device=pc"
+                       aria-label="TikTok"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="../assets/images/social-icon-tiktok.png"
+                             alt="TikTok"
+                             class="footer-social-icon-image">
+                    </a>
+
+                    <a href="https://www.facebook.com/recantogobbo/"
+                       aria-label="Facebook"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="../assets/images/social-icon-facebook.png"
+                             alt="Facebook"
+                             class="footer-social-icon-image">
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@RecantoGobbo"
+                       aria-label="YouTube"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="../assets/images/social-icon-youtube.png"
+                             alt="YouTube"
+                             class="footer-social-icon-image">
+                    </a>
+
+                </div>
+            </div>
 
         </div>
 
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <!-- Footer principal do site -->
-<footer class="footer">
-
-  <!-- Camada por cima da imagem de fundo para melhorar leitura -->
-  <div class="footer-overlay">
-
-    <!-- Container principal do footer -->
-    <div class="footer-container">
-
-      <!-- Coluna da marca -->
-      <div class="footer-brand">
-        <img 
-          src="../assets/images/logo-recanto-gobbo.png" 
-          alt="Logo Recanto Gobbo"
-          class="footer-logo-image"
-        >
-
-        <p>
-          Produtos artesanais com tradição, qualidade e sabor do interior.
-        </p>
-      </div>
-
-      <!-- Coluna de navegação -->
-      <div class="footer-column">
-        <h3>Navegação</h3>
-
-        <nav class="footer-links">
-          <a href="../index.html">Início</a>
-          <a href="sobre.html">Sobre o Recanto</a>
-          <a href="produtos.html">Produtos</a>
-          <a href="servicos.html">Serviços</a>
-          <a href="contato.html">Contato</a>
-        </nav>
-      </div>
-
-      <!-- Coluna de contato -->
-      <div class="footer-column">
-        <h3>Contato</h3>
-
-        <div class="footer-contact">
-          <p>WhatsApp: (16) 99770-3595</p>
-          <p>Email: gobbonetto@gmail.com</p>
-          <p>Localização: Gavião Peixoto, SP</p>
+        <!-- Base inferior do footer -->
+        <div class="footer-bottom">
+            <p>© 2026 Recanto Gobbo</p>
+            <p>CNPJ: 27.228.351/0001-00</p>
         </div>
-      </div>
 
-      <!-- Coluna de redes sociais -->
-      <div class="footer-column">
-        <h3>Siga-nos</h3>
+    </footer>
 
-        <div class="footer-social">
-
-          <a href="https://www.instagram.com/recantogobbo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-            <span>Instagram</span>
-          </a>
-
-          <a href="https://wa.me/5516997703595?text=Olá,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20mais%20informações." aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-          </a>
-
-          <a href="https://www.tiktok.com/@nettogobbo?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
-            <span>TikTok</span>
-          </a>
-
-          <a href="https://www.youtube.com/@RecantoGobbo" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-            <span>YouTube</span>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Base inferior do footer -->
-    <div class="footer-bottom">
-      <p>© 2026 Recanto Gobbo</p>
-      <p>CNPJ: 27.228.351/0001-00</p>
-    </div>
-
-  </div>
-</footer>
-
-<!-- JavaScript principal -->
-<script src="../js/script.js"></script>
+    <!-- JavaScript principal -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

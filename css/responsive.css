@@ -1,11 +1,10 @@
-/* css/responsive.css */
-
 @media (max-width: 768px) {
 
   /* Ajusta altura do header no mobile */
-  .header {
-    height: 110px;
-  }
+    .header {
+        height: 110px;
+        position: absolute;
+    }
 
   /* Ajusta espaçamento interno */
   .navbar {
@@ -167,213 +166,280 @@
 
   /* ================================
     FOOTER MOBILE
-    Visual baseado no layout enviado
   ================================ */
 
-  /* Footer no mobile usa a imagem inteira como fundo */
-  .footer {
-    background-size: cover;
-    background-position: center bottom;
-  }
+    /* RESET TOTAL DO FOOTER DESKTOP */
+    .footer-overlay {
+        padding: 0;
+        background: none;
+    }
 
-  /* Overlay mobile mais claro, parecido com a referência */
-  .footer-overlay {
-    padding: 70px 20px 28px;
+    .footer-container {
+        display: block;
+        grid-template-columns: none;
+        gap: 0;
+    }
 
-    background: linear-gradient(180deg,
-        rgba(255, 253, 248, 0.38) 0%,
-        rgba(255, 253, 248, 0.28) 45%,
-        rgba(31, 61, 43, 0.28) 100%);
-  }
+    .footer-links {
+        flex-direction: row;
+        padding-left: 8px;
+    }
 
-  /* Container vira coluna centralizada */
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    .footer-bottom {
+        border-top: none;
+    }
 
-    gap: 28px;
-  }
+    .footer {
+        position: relative;
+        width: 100%;
+        min-height: 507px;
+        overflow: hidden;
+        background-image: url("../assets/images/footer.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-  /* Logo centralizada no mobile */
-  .footer-brand {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    /* Overlay escuro inferior */
+    .footer-overlay {
+        position: absolute;
+        inset: auto 0 0 0;
+        pointer-events: none;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 400px;
+        height: 467px;
+        background: #000000;
+        opacity: 0.22;
+        z-index: 0;
+    }
 
-  /* Logo maior no mobile */
-  .footer-logo-image {
-    width: 150px;
-    margin-bottom: 22px;
-  }
+    /* Gradiente superior */
+    .footer::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 400px;
+        height: 90px;
+        background: linear-gradient( 0deg, rgba(248, 242, 232, 0.00) 0%, rgba(247, 241, 233, 0.55) 50%, rgba(247, 242, 233, 0.95) 71%, #F5F1EA 100% );
+        z-index: 1;
+        pointer-events: none;
+    }
 
-  /* Esconde texto institucional no mobile */
-  .footer-brand p {
-    display: none;
-  }
+    /* Container principal */
+    .footer-container {
+        position: relative;
+        width: 100%;
+        max-width: 390px;
+        min-height: 507px;
+        margin: 0 auto;
+        display: block;
+        z-index: 3;
+    }
 
-  /* Navegação no mobile em linha */
-  .footer-links {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+/* =========================
+   LOGO
+========================= */
 
-  /* Links do menu mobile */
-  .footer-links a {
-    font-family: var(--font-title);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--color-text-primary);
-  }
+    .footer-brand {
+        position: absolute;
+        top: 92px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-  /* Separador entre links */
-  .footer-links a:not(:last-child)::after {
-    content: "|";
-    margin-left: 10px;
-    color: var(--color-text-primary);
-  }
+        .footer-brand p {
+            display: none;
+        }
 
-  /* Colunas centralizadas */
-  .footer-column {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .footer-logo-image {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+    }
 
-  /* Esconde títulos "Navegação" e "Contato" no mobile */
-  .footer-column h3 {
-    display: none;
-  }
+/* =========================
+   MENU
+========================= */
 
-  /* Card de contato */
-  .footer-contact {
-    width: 100%;
-    max-width: 520px;
+    .footer-nav-column {
+        position: absolute;
+        top: 195px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-    padding: 22px 28px;
-    border-radius: 18px;
+        .footer-nav-column h3 {
+            display: none;
+        }
 
-    background: rgba(255, 253, 248, 0.72);
+    .footer-links {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 7px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
 
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+        .footer-links a {
+            position: relative;
+            font-family: var(--font-title);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
 
-    text-align: left;
-  }
+            .footer-links a:not(:last-child)::after {
+                content: "|";
+                margin-left: 7px;
+            }
 
-  /* Textos do contato */
-  .footer-contact p {
-    font-size: 22px;
-    font-weight: 500;
-    color: #4a463f;
-  }
+/* =========================
+   CARD CONTATO
+========================= */
 
-  /* Título siga-nos */
-  .footer-social::before {
-    content: "Siga-nos:";
-    margin-bottom: 14px;
+    .footer-contact-column {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: fit-content;
+        bottom: 160px;
+    }
 
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--color-text-primary);
-  }
+        .footer-contact-column h3 {
+            display: none;
+        }
 
-  /* Área de redes sociais no mobile */
-  .footer-social {
-    margin-top: 8px;
+    .footer-contact {
+        width: 266px;
+        height: 110px;
+        padding: 6px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 12px;
+        background: rgba(248, 242, 232, 0.82);
+    }
 
-    display: grid;
-    grid-template-columns: repeat(4, 58px);
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-  }
+        .footer-contact a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-primary);
+            line-height: 1;
+            white-space: nowrap;
+        }
 
-  /* Título "Siga-nos" acima dos ícones */
-  .footer-social::before {
-    content: "Siga-nos:";
-    grid-column: 1 / -1;
+            /* ÍCONES */
 
-    margin-bottom: 4px;
+            .footer-contact a:nth-child(1)::before {
+                content: "\f232";
+                font-family: "Font Awesome 6 Brands";
+                color: #67B279;
+            }
 
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--color-text-primary);
-  }
+            .footer-contact a:nth-child(2)::before {
+                content: "\f0e0";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 400;
+            }
 
-  /* Botões das redes */
-  .footer-social a {
-    width: 58px;
-    height: 58px;
+            .footer-contact a:nth-child(3)::before {
+                content: "\f3c5";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+            }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            .footer-contact a::before {
+                width: 24px;
+                font-size: 22px;
+                text-align: center;
+            }
 
-    border-radius: 50%;
+/* =========================
+   REDES SOCIAIS
+========================= */
 
-    background-color: rgba(80, 55, 32, 0.85);
-    color: #fff;
-  }
+    .footer-social-column {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: fit-content;
+        bottom: 82px;
+    }
 
-  /* Esconde o texto no mobile */
-  .footer-social span {
-    display: none;
-  }
+        .footer-social-column h3 {
+            display: none;
+        }
 
-  /* Ícones no mobile */
-  .footer-social i {
-    font-size: 24px;
-    line-height: 1;
-    color: #fff;
-  }
+    .footer-social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        gap: 8px;
+        position: relative;
+        padding-top: 30px;
+    }
 
-  /* Base inferior */
-  .footer-bottom {
-    margin-top: 34px;
-    padding-top: 0;
+    .footer-social-title-image {
+        width: 160px;
+        height: auto;
+        display: block;
+        margin: 0 auto -22px;
+    }
 
-    border-top: none;
+    .footer-social a {
+        display: block;
+    }
 
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-  }
+        .footer-social span {
+            display: none;
+        }
 
-  /* Textos inferiores */
-  .footer-bottom p {
-    font-size: 22px;
-    font-weight: 500;
-    color: #fff;
-  }
+    .footer-social-icon-image {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+        display: block;
+    }
 
-  /* Textos inferiores */
-  .footer-bottom p {
-    font-size: 22px;
-    font-weight: 500;
-    color: #fff;
-  }
+/* =========================
+   COPYRIGHT
+========================= */
 
-  /* Degradê do header menor no mobile */
-  .header::after {
-    bottom: -24px;
-    height: 24px;
-  }
+    .footer-bottom {
+        position: absolute;
+        display: block;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+    }
 
-  /* Degradê do footer menor no mobile */
-  .footer::before {
-    top: -28px;
-    height: 28px;
-  }
+        .footer-bottom p {
+            margin: 0;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 100;
+            line-height: 21px;
+            color: #ffffff;
+        }
 
   /* Remove ícones dos subitens do submenu mobile */
   .submenu li a::before {
