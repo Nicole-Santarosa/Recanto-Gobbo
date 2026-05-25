@@ -12,15 +12,7 @@
   position: relative;
 }
 
-.hero-servicos::before {
-  background: linear-gradient(180deg, rgba(245, 241, 234, 0.96), rgba(245, 241, 234, 0));
-  content: "";
-  height: 64px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
+
 
 .hero-copy {
   color: #ffffff;
@@ -333,9 +325,7 @@
     padding: 50px 24px 0;
   }
 
-  .hero-servicos::before {
-    height: 38px;
-  }
+
 
   .hero-copy {
     max-width: 165px;
