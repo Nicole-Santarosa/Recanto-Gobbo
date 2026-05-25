@@ -25,10 +25,6 @@ body.home .header {
   left: auto;
 }
 
-body.home .header::after {
-  display: none;
-}
-
 body.home .home-header {
   position: relative;
   z-index: 20;
@@ -114,31 +110,19 @@ body.home .home-hero {
   position: relative;
   min-height: 406px;
   overflow: hidden;
-  background-image: url("../../assets/images/Image Hero.png");
-  background-position: 50% 22%;
+  background-image: url("../../assets/images/neto-e-vado-mobile.jpeg");
+  background-position: center 52%;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
-body.home .home-hero::before {
-  content: "";
-  position: absolute;
-  inset: -3px 0 auto;
-  height: 38px;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 241, 234, 0.95) 0%,
-    rgba(245, 241, 234, 0.55) 48%,
-    rgba(245, 241, 234, 0) 100%
-  );
-}
+
 
 body.home .home-hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 body.home .home-hero-content {
@@ -199,7 +183,7 @@ body.home .home-pill-link:focus {
 }
 
 body.home .home-about {
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   background-color: var(--home-bg);
 }
@@ -229,7 +213,7 @@ body.home .home-product-heading span {
 }
 
 body.home .home-product {
-  padding: 22px 0 40px;
+  padding: 8px 0 40px;
   background-color: var(--home-bg);
 }
 
@@ -241,7 +225,7 @@ body.home .home-product-heading {
 }
 
 body.home .home-product-overline {
-  margin: 0 0 7px;
+  margin: 0 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,7 +267,7 @@ body.home .home-product-card {
 }
 
 body.home .home-product-image {
-  height: 268px;
+  height: 200px;
   overflow: hidden;
   background-color: #ece2d5;
 }
@@ -293,7 +277,40 @@ body.home .home-product-image img {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 25%;
+}
+
+/* Customização do Carrossel */
+body.home .home-product-image .carousel,
+body.home .home-product-image .carousel-inner,
+body.home .home-product-image .carousel-item {
+  height: 100%;
+}
+
+body.home .home-product-image .carousel-indicators {
+  margin-bottom: 12px;
+}
+
+body.home .home-product-image .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  margin: 0 6px;
+  padding: 0;
+  opacity: 1;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.home .home-product-image .carousel-indicators button.active {
+  background-color: #ffffff;
+  transform: scale(1.4);
+}
+
+body.home .home-product-image .carousel-control-prev,
+body.home .home-product-image .carousel-control-next {
+  width: 15%;
 }
 
 body.home .home-product-info {
@@ -416,59 +433,63 @@ body.home .home-buy-button:focus {
     }
 
     body.home .home-hero {
-        min-height: 860px;
+        min-height: 500px;
+        height: calc(100vh - 140px);
+        max-height: 800px;
+        background-image: url("../../assets/images/neto-e-vado-desktop.png");
         background-position: center 22%;
     }
 
-        body.home .home-hero::before {
-            height: 78px;
-        }
+
 
     body.home .home-hero-content {
-        min-height: 860px;
-        padding: 280px 24px 220px;
+        min-height: 500px;
+        height: calc(100vh - 140px);
+        max-height: 800px;
+        padding: 250px 24px 0px;
         justify-content: center;
     }
 
     body.home .home-hero h1 {
-        font-size: clamp(56px, 5.3vw, 76px);
+        font-size: clamp(20px, 3.5vw, 64px);
     }
 
     body.home .home-hero p {
-        margin-top: 28px;
-        font-size: clamp(25px, 2.45vw, 35px);
-        line-height: 1.18;
+        margin-top: 20px;
+        font-size: clamp(17px, 1vw, 10px);
+        line-height: 1.3;
     }
 
     body.home .home-hero-actions {
-        margin-top: 22px;
-        gap: 18px;
+        margin-top: 30px;
+        gap: 20px;
+        flex-direction: row;
     }
 
     body.home .home-pill-link {
-        min-width: 300px;
-        padding: 16px 45px;
-        font-size: clamp(20px, 2.15vw, 31px);
+        min-width: 50px;
+        padding: 12px 32px;
+        font-size: 15px;
     }
 
     body.home .home-about {
-        padding: 150px 0 142px;
-        background-color: #ffffff;
+        padding: 40px 0 40px;
+        background-color: var(--home-bg);
     }
 
         body.home .home-about h2 {
-            font-size: clamp(48px, 5.22vw, 75px);
+            font-size: clamp(35px, 3.5vw, 48px);
         }
 
         body.home .home-about p {
-            max-width: 1086px;
-            margin-top: 34px;
-            font-size: clamp(28px, 3.32vw, 48px);
+            max-width: 800px;
+            margin-top: 24px;
+            font-size: clamp(10px, 1.7vw, 24px);
             line-height: 1.5;
         }
 
     body.home .home-product {
-        padding: 96px 0 116px;
+        padding: 10px 0 116px;
     }
 
     body.home .home-product-heading {
@@ -490,7 +511,7 @@ body.home .home-buy-button:focus {
         }
 
     body.home .home-product-heading h2 {
-        font-size: 48px;
+        font-size: 35px;
     }
 
     body.home .home-product-heading > p:last-child {
@@ -501,11 +522,11 @@ body.home .home-buy-button:focus {
     }
 
     body.home .home-product-card {
-        width: min(100%, 520px);
+        width: min(100%, 390px);
     }
 
     body.home .home-product-image {
-        height: 420px;
+        height: 275px;
     }
 
     body.home .home-product-info {
@@ -515,15 +536,15 @@ body.home .home-buy-button:focus {
         body.home .home-product-info h3,
         body.home .home-product-info p,
         body.home .home-buy-button {
-            font-size: 22px;
+            font-size: 19px;
         }
 
         body.home .home-product-info p {
-            margin: 20px 0;
+            margin: 18px 0;
         }
 
     body.home .home-buy-button {
-        min-height: 58px;
+        min-height: 55px;
     }
 }
 
@@ -539,6 +560,6 @@ body.home .home-buy-button:focus {
   }
 
   body.home .home-product-card {
-    width: min(100%, 342px);
+    width: min(100%, 300px);
   }
 }
