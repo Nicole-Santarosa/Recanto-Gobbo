@@ -355,7 +355,7 @@ body.produtos .main-content {
 
 .products-section {
   padding: 90px 20px;
-  background: #f5f2ec;
+  background: #efe7dc;
   min-height: 100vh;
 }
 
@@ -393,7 +393,7 @@ body.produtos .main-content {
 ========================= */
 
 .product-card {
-  background: #ffffff;
+  background: #fcfbf8;
 
   border-radius: 32px;
   overflow: hidden;
