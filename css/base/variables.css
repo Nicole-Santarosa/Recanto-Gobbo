@@ -4,30 +4,32 @@
 ================================ */
 
 :root {
-  /* Cores de fundo */
-  --color-bg-primary: #EBD5C3;
-  --color-bg-secondary: #FFFDF8;
+    /* Cores de fundo */
+    --color-bg-primary: #F5F1EA;
+    --color-bg-secondary: #FFFDF8;
 
-  /* Cores da marca */
-  --color-brand-dark: #1F3D2B;
-  --color-brand-cta: #E0DCCB;
+    /* Cores da marca */
+    --color-brand-dark: #1F3D2B;
+    --color-brand-accent: #E8B923;
+    --color-brand-cta: #E0DCCB;
 
-  /* Cores de texto */
-  --color-text-primary: #1F3D2B;
-  --color-text-secondary: #237D47;
-  --color-text-inverse: #FFFFFF;
+    /* Cores de texto */
+    --color-text-primary: #3E3E2F;
+    --color-text-secondary: #237D47;
+    --color-text-inverse: #FFFFFF;
 
-  /* Estados de interação */
-  --color-hover: #E8B923;
-  --color-pressed: #B85A05;
-  --color-active: #9C7C16;
-  --color-active-menu: #A86A2A;
+    /* Estados de interação */
+    --color-hover: #E8B923;
+    --color-pressed: #B85A05;
+    --color-active: #9C7C16;
+    --color-active-menu: #A86A2A;
 
-  /* Fontes */
-  --font-title: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
-
-  /* Layout */
-  --container-width: 1200px;
-  --header-height: 90px;
+    /* Fontes */
+    --font-title: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
+    --font-subtitle: "Montserrat", sans-serif;
+    
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 90px;
 }

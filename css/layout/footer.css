@@ -1,13 +1,12 @@
 /* ================================
    FOOTER
-   Rodapé principal com imagem de fundo
 ================================ */
 
 .footer {
   width: 100%;
 
-  background-image: url("../../assets/images/footer.png");
-  background-size: cover;
+  background-image: url("/assets/images/footer.png");
+  background-size: 100% 100%;
 
   /* Usa mais a parte inferior da imagem */
   background-position: center 82%;
@@ -155,7 +154,7 @@
 /* Textos inferiores */
 .footer-bottom p {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Link das redes sociais no desktop */
@@ -178,4 +177,103 @@
 .footer-social span {
   display: inline;
   color: var(--color-text-primary);
+}
+
+/* ================================
+   FOOTER DESKTOP
+================================ */
+
+.footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.5;
+}
+
+    .footer-contact a:hover {
+        color: var(--color-pressed);
+    }
+
+    /* Ícones contato desktop */
+
+    .footer-contact a:nth-child(1)::before {
+        content: "\f232";
+        font-family: "Font Awesome 6 Brands";
+        color: #67B279;
+        font-size: 20px;
+    }
+
+    .footer-contact a:nth-child(2)::before {
+        content: "\f0e0";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .footer-contact a:nth-child(3)::before {
+        content: "\f3c5";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    .footer-contact a::before {
+        width: 24px;
+        text-align: center;
+    }
+
+/* =========================
+   SOCIAL DESKTOP
+========================= */
+
+.footer-social-title-image {
+    display: none;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+    .footer-social a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--color-text-primary);
+    }
+
+.footer-social-icon-image {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* Texto das redes apenas no desktop */
+@media (min-width: 769px) {
+
+    .footer-social a:nth-child(1)::after {
+        content: "WhatsApp";
+    }
+
+    .footer-social a:nth-child(2)::after {
+        content: "Instagram";
+    }
+
+    .footer-social a:nth-child(3)::after {
+        content: "TikTok";
+    }
+
+    .footer-social a:nth-child(4)::after {
+        content: "Facebook";
+    }
+
+    .footer-social a:nth-child(5)::after {
+        content: "YouTube";
+    }
 }
