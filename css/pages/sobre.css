@@ -16,7 +16,7 @@
 
 /* Banner principal */
 .sobre-hero {
-  min-height: 720px;
+  min-height: 650px;
   margin-top: var(--header-height);
 
   display: flex;
@@ -24,10 +24,35 @@
 
   background-image: url("../../assets/images/hero-sobre.png");
   background-size: 100% auto;
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
 
   border-radius: 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transição suave do hero para o conteúdo */
+.sobre-hero::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 45px;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 248, 0) 0%,
+    var(--color-bg-primary) 100%
+  );
+
+  z-index: 1;
 }
 
 /* Texto do banner */
@@ -38,6 +63,9 @@
   padding: 150px 24px 0;
 
   color: #fff;
+
+  position: relative;
+  z-index: 2;
 }
 
 /* Título do banner */
@@ -500,23 +528,43 @@
 @media (max-width: 768px) {
     /* Banner principal no mobile */
     .sobre-hero {
-    min-height: 300px;
+    min-height: 430px;
     margin-top: var(--header-height);
 
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
 
     background-image: url("../../assets/images/hero-sobre.png");
-    background-size: 100% auto;
-    background-position: center top;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
 
     border-radius: 0;
+
+    position: relative;
     }
 
     /* Texto do banner no mobile */
     .sobre-hero-content {
-    padding: 90px 24px 0;
+      padding: 0 24px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sobre-hero::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.18) 0%,
+        rgba(0, 0, 0, 0.10) 35%,
+        rgba(0, 0, 0, 0.32) 100%
+      );
+
+      z-index: 1;
     }
 
   .sobre-hero-content h1 {
