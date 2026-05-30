@@ -143,6 +143,98 @@ if (instagramCards && instagramPrev && instagramNext) {
   });
 }
 
+/* ================================
+   ANIMAÇÃO DE ENTRADA - SERVICE CARDS
+================================ */
+
+const serviceCards = document.querySelectorAll('.service-card');
+
+if (serviceCards.length > 0) {
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.addEventListener('transitionend', () => {
+          entry.target.style.transitionDelay = '0s';
+        }, { once: true });
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -200px 0px" });
+
+  serviceCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.12}s`;
+    cardObserver.observe(card);
+  });
+}
+
+/* ================================
+   CARROSSEL 3D - BONÉ PRODUTO
+================================ */
+
+const boneCarousel = document.getElementById('bone-carousel');
+
+if (boneCarousel) {
+  const slides = Array.from(boneCarousel.querySelectorAll('.bone-carousel-slide'));
+  const prevBtn = boneCarousel.querySelector('.bone-carousel-btn--prev');
+  const nextBtn = boneCarousel.querySelector('.bone-carousel-btn--next');
+  const total = slides.length;
+  let current = 0;
+
+  function getConfig(offset) {
+    const abs = Math.abs(offset);
+    const sign = offset < 0 ? -1 : 1;
+    if (abs === 0) return { tx: '-50%',                              tz: 0,    ry: 0,           scale: 1,    opacity: 1,    z: 5 };
+    if (abs === 1) return { tx: `calc(-50% + ${sign * 210}px)`,     tz: -150, ry: sign * -42,  scale: 0.78, opacity: 0.8,  z: 3 };
+    if (abs === 2) return { tx: `calc(-50% + ${sign * 360}px)`,     tz: -300, ry: sign * -60,  scale: 0.55, opacity: 0.4,  z: 1 };
+    return null;
+  }
+
+  function updateCarousel() {
+    slides.forEach((slide, i) => {
+      let offset = ((i - current) % total + total) % total;
+      if (offset > total / 2) offset -= total;
+
+      const config = getConfig(offset);
+
+      if (!config) {
+        slide.style.opacity = '0';
+        slide.style.zIndex = '0';
+        slide.style.pointerEvents = 'none';
+        return;
+      }
+
+      slide.style.transform = `translateX(${config.tx}) translateY(-50%) translateZ(${config.tz}px) rotateY(${config.ry}deg) scale(${config.scale})`;
+      slide.style.opacity = config.opacity;
+      slide.style.zIndex = config.z;
+      slide.style.pointerEvents = offset === 0 ? 'auto' : 'none';
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + total) % total;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % total;
+    updateCarousel();
+  });
+
+  const stage = boneCarousel.querySelector('.bone-carousel-stage');
+  let touchStartX = 0;
+  stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+      current = dx < 0 ? (current + 1) % total : (current - 1 + total) % total;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+}
+
 //card produtos
 function changeImage(element){
 

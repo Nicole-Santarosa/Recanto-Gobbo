@@ -50,6 +50,18 @@ body.produtos .main-content {
   background-repeat: no-repeat;
 }
 
+/* Gradiente cream para transição suave com o header fixo */
+.products-hero::before {
+  background: linear-gradient(180deg, rgba(245, 241, 234, 0.96), rgba(245, 241, 234, 0));
+  content: "";
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
 /* Overlay cinematográfico */
 .products-hero-overlay {
   position: absolute;
@@ -96,7 +108,7 @@ body.produtos .main-content {
 .products-hero-content {
   position: relative;
 
-  z-index: 2;
+  z-index: 3;
 
   width: 100%;
 
@@ -354,7 +366,7 @@ body.produtos .main-content {
 ========================= */
 
 .products-section {
-  padding: 90px 20px;
+  padding: 90px 20px 0;
   background: #f5f2ec;
   min-height: 100vh;
 }
@@ -624,19 +636,17 @@ box-shadow:
 
 .products-banner {
   margin-top: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .banner-card {
   position: relative;
 
   overflow: hidden;
-  border-radius: 38px;
+  border-radius: 0;
 
   height: 280px;
-
-box-shadow:
-  0 1px 2px rgba(0,0,0,0.04),
-  0 20px 60px rgba(0,0,0,0.08);
 }
 
 /* Imagem banner */
@@ -809,7 +819,7 @@ box-shadow:
 
   /* PRODUTOS */
   .products-section {
-    padding: 60px 16px;
+    padding: 60px 16px 0;
   }
 
   .product-card {
@@ -820,4 +830,160 @@ box-shadow:
     height: 500px;
   }
 
+  .products-banner {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  /* CARROSSEL MOBILE */
+  .bone-carousel-stage {
+    height: 300px;
+  }
+
+  .bone-carousel-slide img {
+    width: 200px;
+    max-height: 260px;
+  }
+
+  .bone-carousel-btn {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .product-section-header h2 {
+    font-size: 28px;
+  }
+
+  .product-purchase-cta .buy-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+/* =========================
+   GALERIA DO PRODUTO
+========================= */
+
+.product-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-section-badge {
+  display: inline-block;
+  background: #4b4d33;
+  color: #ffffff;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.product-section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: #4b473d;
+  margin-bottom: 10px;
+}
+
+.product-section-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #6b6457;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* === CARROSSEL 3D BONÉ === */
+
+.bone-carousel {
+  align-items: center;
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.bone-carousel-stage {
+  flex: 1;
+  height: 420px;
+  perspective: 1100px;
+  perspective-origin: 50% 50%;
+  position: relative;
+}
+
+.bone-carousel-slide {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.55s ease;
+  will-change: transform, opacity;
+}
+
+.bone-carousel-slide img {
+  display: block;
+  filter: drop-shadow(0 28px 52px rgba(62, 42, 22, 0.3));
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  width: 300px;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bone-carousel-slide:hover img {
+  transform: scale(1.35);
+}
+
+.bone-carousel-btn {
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 22px;
+  height: 52px;
+  justify-content: center;
+  opacity: 0.55;
+  position: relative;
+  transition: opacity 180ms ease, transform 180ms ease;
+  width: 52px;
+  z-index: 10;
+}
+
+.bone-carousel-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.product-purchase-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.product-purchase-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #3f412d;
+  margin: 0;
+}
+
+.product-purchase-cta .buy-button {
+  width: auto;
+  min-width: 220px;
 }

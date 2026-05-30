@@ -188,130 +188,84 @@
     <section class="products-section">
 
       <!-- Produtos -->
-      <div class="container products-container">
+      <div id="bone" class="container products-container">
 
-        <div class="row justify-content-center g-4">
-
-          <!-- CARD 1 -->
-          <div class="col-lg-4 col-md-6">
-
-            <div id="bone" class="product-card">
-
-              <!-- Imagem -->
-<div class="product-image-wrapper">
-
-  <span class="product-badge">
-    Exclusivo
-  </span>
-
-  <!-- IMAGEM PRINCIPAL -->
-  <img 
-    id="mainProductImage"
-    src="../assets/images/bone1.jpeg" 
-    alt="Boné Recanto Gobbo"
-    class="product-image"
-  >
-
-  <!-- MINIATURAS -->
-  <div class="product-thumbnails">
-
-    <img 
-      src="../assets/images/bone1.jpeg"
-      class="thumb active-thumb"
-      onclick="changeImage(this)"
-    >
-
-    <img 
-      src="../assets/images/bone2.jpeg"
-      class="thumb"
-      onclick="changeImage(this)"
-    >
-
-    <img 
-      src="../assets/images/bone3.jpeg"
-      class="thumb"
-      onclick="changeImage(this)"
-    >
-
-    <img 
-      src="../assets/images/bone4.jpeg"
-      class="thumb"
-      onclick="changeImage(this)"
-    >
-
-  </div>
-
-</div>
-
-              <!-- Conteúdo -->
-              <div class="product-content">
-
-                <h2>Boné Recanto Gobbo</h2>
-
-                <p class="product-price">
-                  R$ 80,00
-                </p>
-
-                <!-- BOTÃO WHATSAPP -->
-                <a 
-                  href="https://wa.me/5516997703595?text=Ol%C3%A1,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20comprar%20o%20Bon%C3%A9%20Recanto%20Gobbo."
-                  class="buy-button"
-                  target="_blank"
-                >
-
-                  <i class="fa-solid fa-bag-shopping"></i>
-
-                  Comprar agora
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>  
-          
+        <!-- Cabeçalho do produto -->
+        <div class="product-section-header">
+          <span class="product-section-badge">Exclusivo</span>
+          <h2>Boné Recanto Gobbo</h2>
+          <p>Feito para quem carrega a essência da roça e representa o campo com orgulho.</p>
         </div>
 
+        <!-- Carrossel 3D do produto -->
+        <div class="bone-carousel" id="bone-carousel">
+
+          <button class="bone-carousel-btn bone-carousel-btn--prev" aria-label="Imagem anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="bone-carousel-stage">
+            <div class="bone-carousel-slide"><img src="../assets/images/Bone1_fundo_transparente.png" alt="Boné Recanto Gobbo 1" draggable="false"></div>
+            <div class="bone-carousel-slide"><img src="../assets/images/Bone2_fundo_transparente.png" alt="Boné Recanto Gobbo 2" draggable="false"></div>
+            <div class="bone-carousel-slide"><img src="../assets/images/Bone3_fundo_transparente.png" alt="Boné Recanto Gobbo 3" draggable="false"></div>
+            <div class="bone-carousel-slide"><img src="../assets/images/Bone4_fundo_transparente.png" alt="Boné Recanto Gobbo 4" draggable="false"></div>
+            <div class="bone-carousel-slide"><img src="../assets/images/Bone5_fundo_transparente.png" alt="Boné Recanto Gobbo 5" draggable="false"></div>
+          </div>
+
+          <button class="bone-carousel-btn bone-carousel-btn--next" aria-label="Próxima imagem">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+        </div>
+
+        <!-- Compra -->
+        <div class="product-purchase-cta">
+          <a
+            href="https://wa.me/5516997703595?text=Ol%C3%A1,%20vim%20pelo%20site%20do%20Recanto%20Gobbo%20e%20gostaria%20de%20comprar%20o%20Bon%C3%A9%20Recanto%20Gobbo."
+            class="buy-button"
+            target="_blank"
+          >
+            <i class="fa-solid fa-bag-shopping"></i>
+            Comprar agora
+          </a>
+        </div>
+
+      </div>
 
       <!-- =========================
            BANNER
       ========================== -->
 
-      <div class="container products-container">
+      <div class="products-banner">
 
-        <div class="products-banner">
+        <div class="banner-card">
 
-          <div class="banner-card">
+          <!-- Imagem -->
+          <img
+            src="../assets/images/porteira2.png"
+            alt="Homem do campo"
+            class="banner-image"
+          >
 
-            <!-- Imagem -->
-            <img 
-              src="../assets/images/porteira2.png" 
-              alt="Homem do campo"
-              class="banner-image"
-            >
+          <!-- Overlay -->
+          <div class="banner-overlay"></div>
 
-            <!-- Overlay -->
-            <div class="banner-overlay"></div>
+          <!-- Texto -->
+          <div class="banner-text">
 
-            <!-- Texto -->
-            <div class="banner-text">
-
-              <div class="banner-tag">
-                VIDA NO CAMPO
-              </div> 
-
-              <h3>
-                O campo mora nos detalhes.
-              </h3>
-
-              <p>
-                Mais do que produtos,
-                uma forma simples e verdadeira de levar
-                a essência da vida no campo para perto de você.
-              </p>
-
+            <div class="banner-tag">
+              VIDA NO CAMPO
             </div>
+
+            <h3>
+              O campo mora nos detalhes.
+            </h3>
+
+            <p>
+              Mais do que produtos,
+              uma forma simples e verdadeira de levar
+              a essência da vida no campo para perto de você.
+            </p>
 
           </div>
 

@@ -48,14 +48,17 @@
       <!-- Menu principal -->
       <ul class="nav-menu" id="nav-menu">
 
+        <!-- Link para a página inicial -->
         <li class="nav-item">
           <a href="../index.html">Início</a>
         </li>
 
+        <!-- Link para a página Sobre -->
         <li class="nav-item">
           <a href="sobre.html">Sobre o Recanto</a>
         </li>
 
+        <!-- Item com submenu de produtos -->
         <li class="nav-item has-submenu">
           <div class="submenu-parent">
             <a href="produtos.html">Produtos</a>
@@ -70,6 +73,7 @@
           </ul>
         </li>
 
+        <!-- Item com submenu de serviços -->
         <li class="nav-item has-submenu">
           <div class="submenu-parent">
             <a href="servicos.html">Serviços</a>
@@ -87,6 +91,7 @@
           </ul>
         </li>
 
+        <!-- Link para a página Contato -->
         <li class="nav-item">
           <a href="contato.html" class="active">Contato</a>
         </li>
@@ -95,9 +100,10 @@
 
       <!-- Frase institucional do header desktop -->
       <div class="header-phrase">
-        <img 
-          src="../assets/images/icone-header.png" 
-          alt="" 
+        <!-- Ícone decorativo da frase do header -->
+        <img
+          src="../assets/images/icone-header.png"
+          alt=""
           class="header-icon"
         >
 
@@ -131,7 +137,7 @@
       
       <section class="contact-info-cards">
         
-        <div class="info-card">
+        <a class="info-card" href="tel:+5516997703595">
           <div class="card-icon">
             <i class="fa-solid fa-phone"></i>
           </div>
@@ -139,9 +145,9 @@
             <h3>Telefone / WhatsApp</h3>
             <p>(16) 99770-3595</p>
           </div>
-        </div>
+        </a>
 
-        <div class="info-card">
+        <a class="info-card" href="mailto:gobbonetto@gmail.com">
           <div class="card-icon">
             <i class="fa-solid fa-envelope"></i>
           </div>
@@ -149,9 +155,9 @@
             <h3>E-mail</h3>
             <p>gobbonetto@gmail.com</p>
           </div>
-        </div>
+        </a>
 
-        <div class="info-card">
+        <a class="info-card" href="https://maps.app.goo.gl/Z4Uk17eoqn9L3mCQ8" target="_blank" rel="noopener noreferrer">
           <div class="card-icon">
             <i class="fa-solid fa-location-dot"></i>
           </div>
@@ -159,41 +165,36 @@
             <h3>Endereço</h3>
             <p>Gavião Peixoto, SP</p>
           </div>
-        </div>
+        </a>
 
       </section>
 
       <section class="contact-form-section">
         <h2>Envie sua mensagem</h2>
-        
-        <form id="contact-form" class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Nome completo" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="E-mail" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <input type="text" id="subject" name="subject" placeholder="Assunto" required>
-          </div>
-
-          <div class="form-group">
-            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">
-            Enviar mensagem <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-
-        <div class="form-footer-notice">
-          <i class="fa-regular fa-comment-dots"></i>
-          <span>Respondemos o mais rápido possível!</span>
-        </div>
       </section>
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem aqui" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Enviar mensagem <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <div class="form-footer-notice">
+        <i class="fa-regular fa-comment-dots"></i>
+        <span>Respondemos o mais rápido possível!</span>
+      </div>
 
     </div>
 

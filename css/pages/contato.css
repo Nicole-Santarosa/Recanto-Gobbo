@@ -14,37 +14,71 @@
 /* --- 1. HERO SECTION (Banner de Cima) --- */
 .contact-hero {
   position: relative;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), 
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),
               url('../../assets/images/recanto_por_do_sol.jpeg') no-repeat center center/cover;
-  
-  padding: 140px 20px;
+
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding: 64px clamp(52px, 9vw, 128px) 40px;
   color: #ffffff;
   width: 100%;
-  
-  /* Garante que o banner fique na camada de baixo e não empurre a estopa de forma errada */
-  z-index: 1; 
-  margin-bottom: 0; 
+
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.contact-hero::before {
+  background: linear-gradient(180deg, rgba(245, 241, 234, 0.96), rgba(245, 241, 234, 0));
+  content: "";
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 5, 2, 0) 0%,
+    rgba(8, 5, 2, 0.88) 100%
+  );
 }
 
 .contact-hero-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Alinha o texto à esquerda */
-  gap: 40px;
+  width: 100%;
+}
+
+.contact-hero-text {
+  color: #ffffff;
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 15px;
+  font-family: var(--font-title);
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 18px;
 }
 
 .contact-hero-text .hero-subtitle {
-  font-size: 1.2rem;
-  max-width: 450px;
-  line-height: 1.5;
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0;
 }
 
 
@@ -54,72 +88,130 @@
   position: relative;
   
   /* COLOCAÇÃO EXATA DA IMAGEM: Ela inicia exatamente aqui e cobre as laterais 100% */
-  background: url('../../assets/images/background contato.png') no-repeat center top;
-  background-size: 100% auto; 
+  background: url('../../assets/images/background contato desktop.png') no-repeat center top;
+  background-size: cover; 
   
-  /* Sobe a textura de estopa com o trigo para encaixar na emenda exata da foto do pôr do sol */
-  margin-top: -45px; 
-  padding: 80px 20px 60px 20px; /* O padding-top de 80px protege o trigo para os cards não ficarem em cima dele */
+  margin-top: 0;
+  padding: 52px 20px 48px 20px;
   
   /* Força a textura e os elementos internos a virem para a frente da foto do topo */
   z-index: 10; 
 }
 
+.contact-center-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 5, 2, 0.88) 0%,
+    rgba(8, 5, 2, 0) 100%
+  );
+}
+
 /* Ajuste do bloco interno para centralizar os cards brancos sobre a estopa */
-.contact-info-cards,
-.contact-form-section {
+.contact-info-cards {
+  position: relative;
+  z-index: 1;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffffff; 
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 8px 32px rgba(74, 62, 53, 0.08); /* Sombra suave para destacar do fundo rústico */
-  margin-bottom: 30px;
+  margin-top: 80px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  background: none;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.contact-form-section {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Cards de Informação Internos */
 .info-card {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 14px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(74, 62, 53, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.info-card:not(:last-child) {
-  border-bottom: 1px solid #eae6df;
+a.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(74, 62, 53, 0.15);
 }
 
 .card-icon {
-  background-color: #4a3e35; /* Marrom escuro institucional */
+  background-color: #4a3e35;
   color: #fff;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .card-content h3 {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #4a3e35;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .card-content p {
   color: #666;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 /* Formulário de Contato Interno */
 .contact-form-section h2 {
   font-family: 'Playfair Display', serif;
   color: #4a3e35;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.contact-form-section h2::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background-color: #4a3e35;
+  margin-top: 10px;
+  margin-bottom: 24px;
 }
 
 .form-row {
@@ -129,48 +221,70 @@
 
 .form-group {
   flex: 1;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #4a3e35;
+  margin-bottom: 8px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 15px;
-  border: 1px solid #dcd7cd;
-  border-radius: 12px;
-  background-color: #fff;
+  padding: 10px 14px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  background-color: #f8f5f0;
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  transition: border-color 0.3s ease;
+  color: #333;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
   box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #b0a89e;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: #4a3e35;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 62, 53, 0.08);
 }
 
 /* Botão Enviar */
 .btn-submit {
   width: 100%;
-  background-color: #3b4233; /* Verde Oliva Escuro do botão */
+  background: linear-gradient(135deg, #3b4233, #525c47);
   color: #fff;
   border: none;
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 1rem;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
   font-weight: 600;
+  letter-spacing: 0.3px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .btn-submit:hover {
-  background-color: #2b3126;
+  background: linear-gradient(135deg, #2b3126, #3b4233);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(59, 66, 51, 0.28);
 }
 
 /* Aviso de rodapé do formulário */
@@ -179,21 +293,26 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 20px;
-  color: #6b775c;
-  font-size: 0.9rem;
+  margin-top: 18px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #9a9186;
+  font-size: 0.82rem;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 1;
 }
 
 /* --- 3. INSTAGRAM BANNER INFERIOR --- */
 .instagram-cta-banner {
   background: url('../../assets/images/produtos-queijos-recanto.jpeg') no-repeat center center/cover;
-  border-radius: 24px;
-  margin: 0 auto 60px auto;
-  max-width: 1100px;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   position: relative;
-  z-index: 15; /* Garante que fique por cima da estopa se eles se cruzarem */
+  z-index: 15;
 }
 
 .cta-overlay {
@@ -238,13 +357,26 @@
 
 /* RESPONSIVIDADE (MOBILE-FIRST ADAPTATIONS)  */
 @media (max-width: 768px) {
-  .contact-hero-container {
-    flex-direction: column;
-    text-align: center;
+  .contact-hero {
+    background-position: 45% center;
+    min-height: 50vh;
+    padding: 50px 24px 40px;
+    align-items: flex-start;
   }
-  
+
+  .contact-hero-text {
+    max-width: 165px;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
   .contact-hero-text .hero-subtitle {
-    margin: 0 auto;
+    font-size: 10px;
+    line-height: 1.22;
+    margin: 0;
   }
 
   .form-row {
@@ -264,7 +396,11 @@
   }
   
   .contact-center-container {
-    background-size: cover; /* Melhora a visualização da estopa no celular */
+    background-size: cover;
     padding-top: 60px;
+  }
+
+  .contact-info-cards {
+    flex-direction: column;
   }
 }
